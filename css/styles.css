@@ -588,6 +588,27 @@ body.is-loaded .loader { opacity: 0; visibility: hidden; }
   color: var(--ink-soft);
 }
 
+/* ---------- Agenda en línea (widget Huli) ---------- */
+.booking__sub {
+  max-width: 34rem;
+  color: var(--ink-soft);
+  margin-bottom: 2.4rem;
+}
+.booking__widget {
+  background: var(--white);
+  border: 1px solid rgba(199, 160, 122, 0.3);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 50px rgba(57, 30, 16, 0.12);
+  padding: clamp(0.8rem, 2.5vw, 2rem);
+  min-height: 420px;
+  overflow: hidden;
+}
+.booking__widget .huli-cw,
+.booking__widget iframe {
+  width: 100% !important;
+  border: 0;
+}
+
 /* ---------- Insignia de reseñas ---------- */
 .review-badge {
   display: inline-flex;
