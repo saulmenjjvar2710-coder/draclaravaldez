@@ -730,6 +730,6 @@ a.contact__value:hover { border-color: var(--gold); }
 }
 
 @media (min-width: 1024px) {
-  .services__grid { grid-template-columns: repeat(4, 1fr); gap: 1.6rem; }
+  .services__grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
   .trust__grid { grid-template-columns: repeat(4, 1fr); }
 }
