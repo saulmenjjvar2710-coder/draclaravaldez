@@ -707,7 +707,7 @@ a.contact__value:hover { border-color: var(--gold); }
 /* ============ Desktop ============ */
 @media (min-width: 760px) {
   .hero__inner { grid-template-columns: 1.15fr 0.85fr; gap: 4rem; }
-  .bna__grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: start; }
+  .bna__grid { grid-template-columns: repeat(2, 1fr); gap: 2.4rem 2rem; align-items: start; }
   /* Desktop: pasos en fila, línea horizontal entre badges */
   .path__steps { grid-template-columns: repeat(4, 1fr); gap: 2rem; }
   .path__step { padding-left: 0; padding-top: 4.4rem; }
