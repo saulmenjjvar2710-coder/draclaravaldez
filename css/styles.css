@@ -676,6 +676,7 @@ body.is-loaded .loader { opacity: 0; visibility: hidden; }
   box-shadow: 0 20px 50px rgba(57, 30, 16, 0.16);
 }
 .clinic__photo img { width: 100%; }
+.clinic__cta { margin-top: 1.2rem; }
 .clinic__media .video-frame { max-width: 320px; margin-inline: auto; }
 
 /* ---------- CTA ---------- */
