@@ -52,6 +52,31 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dra. Clara Valdez — Cirugía y Estética Dental",
+    "url": "https://draclaravaldez.com",
+    "image": "https://draclaravaldez.com/assets/img/hero-poster.jpg",
+    "telephone": "+50672110934",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza Mayor, local 25-26, planta baja, Rohrmoser",
+      "addressLocality": "San José",
+      "addressRegion": "San José",
+      "addressCountry": "CR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 9.9451891, "longitude": -84.1174972 },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=9.9451891,-84.1174972",
+    "sameAs": [
+      "https://instagram.com/draclaravaldez",
+      "https://www.hulihealth.com/es/doctor/clara-valdez-gomez_234795"
+    ],
+    "paymentAccepted": "Tarjeta de crédito, tarjeta de débito, efectivo, SINPE Móvil, transferencia",
+    "medicalSpecialty": "Dentistry"
+  }
+  </script>
   <script type="text/javascript">var hh_widgets = ['Calendar'];(function(d, s, id) { var js, h = d.getElementsByTagName('head')[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//widgets.hulilabs.com/js/widgets/loader.js"; h.appendChild(js);}(document, 'script', 'huli-loader'));</script>
 </head>
 <body>
@@ -68,6 +93,17 @@
         <span class="logo__name">CLARA</span><span class="logo__script">Valdez</span>
         <span class="logo__sub">Cirugía y Estética</span>
       </a>
+      <nav class="nav" id="nav" aria-label="Secciones del sitio">
+        <a href="#nueva-clinica" class="nav__link">Clínica</a>
+        <a href="#sobre" class="nav__link">Sobre mí</a>
+        <a href="#servicios" class="nav__link">Servicios</a>
+        <a href="#antes-despues" class="nav__link">Resultados</a>
+        <a href="#preguntas" class="nav__link">Preguntas</a>
+        <a href="#agenda" class="nav__link nav__link--cta">Agenda tu cita</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
       <a href="https://wa.me/50672110934?text=Hola%20Dra.%20Clara%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener" class="btn btn--outline btn--sm header__cta">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.5Z"/></svg>
         WhatsApp
@@ -122,7 +158,7 @@
         <div class="clinic__content">
           <p class="eyebrow reveal">Ya abrimos</p>
           <h2 class="section__title reveal">Bienvenido a<br><em>mi nueva clínica</em></h2>
-          <p class="reveal">Después de meses de trabajo, ya abrí las puertas de mi propia clínica dental en <strong>Plaza Mayor, Rohrmoser</strong>.</p>
+          <p class="reveal">Después de meses de trabajo, ya abrí las puertas de mi propia clínica dental en <strong>Plaza Mayor, Rohrmoser</strong> (local 25-26, planta baja).</p>
           <p class="reveal">Cuando inicié este proyecto pensé en darte un espacio mucho más amplio y elegante, pero sobre todo un lugar donde te sientas cómodo desde que entras. Ya puedes venir a conocerla.</p>
           <a href="#agenda" class="btn btn--gold btn--lg reveal clinic__cta">Reserva tu cita</a>
         </div>
@@ -258,6 +294,21 @@
         </article>
 
       </div>
+
+      <div class="services__more reveal">
+        <p class="services__more-title">También te atiendo en</p>
+        <ul class="services__list">
+          <li>Blanqueamiento dental</li>
+          <li>Limpieza y valoración</li>
+          <li>Resinas y cierre de diastemas</li>
+          <li>Coronas, puentes e incrustaciones</li>
+          <li>Implantes dentales</li>
+          <li>Cirugía oral y cordales</li>
+          <li>Prótesis dentales</li>
+          <li>Férula de relajamiento</li>
+          <li>Emergencias dentales</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -338,44 +389,6 @@
     </div>
   </section>
 
-  <!-- ============ TU CAMINO ============ -->
-  <section class="path section" id="camino">
-    <div class="container">
-      <p class="eyebrow reveal">Tu camino</p>
-      <h2 class="section__title reveal">Así de simple es<br><em>empezar conmigo</em></h2>
-      <ol class="path__steps">
-        <li class="path__step reveal">
-          <span class="path__badge">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.9-.9L3 20l1-5.4a8.2 8.2 0 0 1-1-3.9A8.4 8.4 0 0 1 11.5 2.3 8.4 8.4 0 0 1 21 11.5Z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></svg>
-          </span>
-          <h3><i>1 ·</i> Reserva tu cita</h3>
-          <p>Elige tu espacio en mi agenda en línea. ¿Tienes dudas? Escríbeme por WhatsApp y te respondo yo.</p>
-        </li>
-        <li class="path__step reveal">
-          <span class="path__badge">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3M16 2v3M4 8h16M5 4h14a1 1 0 0 1 1 1v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1Z"/><path d="m9.5 14 2 2 3.5-4"/></svg>
-          </span>
-          <h3><i>2 ·</i> Valoración inicial</h3>
-          <p>Nos conocemos, escucho lo que sueñas para tu sonrisa y evalúo tu caso.</p>
-        </li>
-        <li class="path__step reveal">
-          <span class="path__badge">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M12 17v3M8.5 20h7M8 11c.8-1.6 1.8-2.4 4-2.4s3.2.8 4 2.4"/></svg>
-          </span>
-          <h3><i>3 ·</i> Diseño digital</h3>
-          <p>Te muestro en pantalla cómo quedaría tu sonrisa antes de tocar un solo diente.</p>
-        </li>
-        <li class="path__step reveal">
-          <span class="path__badge">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.5 2.2 4 3.4 6.5 3.2.6 5.6-1.6 11.2-6.5 14.5C7.1 17.4 4.9 11.8 5.5 6.2 8 6.4 10.5 5.2 12 3Z"/><path d="m9.5 12 1.8 1.8 3.2-3.6"/></svg>
-          </span>
-          <h3><i>4 ·</i> Transformación</h3>
-          <p>Iniciamos tu tratamiento con un plan claro, tiempos definidos y acompañamiento total.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
   <!-- ============ CASOS EN VIDEO ============ -->
   <section class="cases section section--dark" id="casos">
     <div class="container">
@@ -417,6 +430,44 @@
         </figure>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ============ TU CAMINO ============ -->
+  <section class="path section section--cream" id="camino">
+    <div class="container">
+      <p class="eyebrow reveal">Tu camino</p>
+      <h2 class="section__title reveal">Así de simple es<br><em>empezar conmigo</em></h2>
+      <ol class="path__steps">
+        <li class="path__step reveal">
+          <span class="path__badge">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.9-.9L3 20l1-5.4a8.2 8.2 0 0 1-1-3.9A8.4 8.4 0 0 1 11.5 2.3 8.4 8.4 0 0 1 21 11.5Z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></svg>
+          </span>
+          <h3><i>1 ·</i> Reserva tu cita</h3>
+          <p>Elige tu espacio en mi agenda en línea. ¿Tienes dudas? Escríbeme por WhatsApp y te respondo yo.</p>
+        </li>
+        <li class="path__step reveal">
+          <span class="path__badge">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3M16 2v3M4 8h16M5 4h14a1 1 0 0 1 1 1v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1Z"/><path d="m9.5 14 2 2 3.5-4"/></svg>
+          </span>
+          <h3><i>2 ·</i> Valoración inicial</h3>
+          <p>Nos conocemos, escucho lo que sueñas para tu sonrisa y evalúo tu caso.</p>
+        </li>
+        <li class="path__step reveal">
+          <span class="path__badge">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M12 17v3M8.5 20h7M8 11c.8-1.6 1.8-2.4 4-2.4s3.2.8 4 2.4"/></svg>
+          </span>
+          <h3><i>3 ·</i> Diseño digital</h3>
+          <p>Te muestro en pantalla cómo quedaría tu sonrisa antes de tocar un solo diente.</p>
+        </li>
+        <li class="path__step reveal">
+          <span class="path__badge">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.5 2.2 4 3.4 6.5 3.2.6 5.6-1.6 11.2-6.5 14.5C7.1 17.4 4.9 11.8 5.5 6.2 8 6.4 10.5 5.2 12 3Z"/><path d="m9.5 12 1.8 1.8 3.2-3.6"/></svg>
+          </span>
+          <h3><i>4 ·</i> Transformación</h3>
+          <p>Iniciamos tu tratamiento con un plan claro, tiempos definidos y acompañamiento total.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -475,6 +526,42 @@
     </div>
   </section>
 
+  <!-- ============ TESTIMONIOS ============ -->
+  <section class="testimonials section section--dark" id="opiniones">
+    <div class="container">
+      <p class="eyebrow eyebrow--gold reveal">Opiniones</p>
+      <h2 class="section__title reveal">Lo que dicen<br><em>mis pacientes</em></h2>
+      <div class="testimonials__grid">
+
+        <blockquote class="testimonial reveal">
+          <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+          <p>“Todo lo bueno que la gente dice de usted y lo que usted dice de usted misma es totalmente cierto. Y la cereza en el pastel: ‘cada milímetro en odonto cuenta’. Eso dice más de su vocación que cualquier otra cosa.”</p>
+          <cite>— Carlos F. · Reseña verificada en HuliHealth</cite>
+        </blockquote>
+
+        <blockquote class="testimonial reveal">
+          <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+          <p>“Una experiencia 10 de 10. Espero que la doctora me ayude con su profesionalismo a tener la sonrisa que siempre he querido.”</p>
+          <cite>— Keynier C. · Reseña verificada en HuliHealth</cite>
+        </blockquote>
+
+        <blockquote class="testimonial reveal">
+          <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+          <p>“Excelente atención, puntual y trato muy amable. Recomendada.”</p>
+          <cite>— Edwin A. · Reseña verificada en HuliHealth</cite>
+        </blockquote>
+
+        <blockquote class="testimonial reveal">
+          <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+          <p>“Excelente trato de la doctora, consultorio muy agradable.”</p>
+          <cite>— Hernando R. · Reseña verificada en HuliHealth</cite>
+        </blockquote>
+
+      </div>
+      <a href="https://www.hulihealth.com/es/doctor/clara-valdez-gomez_234795" target="_blank" rel="noopener" class="testimonials__link reveal">Ver las 20 reseñas en HuliHealth →</a>
+    </div>
+  </section>
+
   <!-- ============ AGENDA EN LÍNEA ============ -->
   <section class="booking section section--cream" id="agenda">
     <div class="container">
@@ -498,7 +585,7 @@
       <p class="cta__note reveal">Te respondo en menos de 1 minuto</p>
       <a href="https://www.hulihealth.com/es/doctor/clara-valdez-gomez_234795" target="_blank" rel="noopener" class="review-badge reveal">
         <span class="review-badge__stars" aria-hidden="true">★★★★★</span>
-        <span class="review-badge__text"><strong>5.0</strong> · 19 reseñas verificadas en HuliHealth</span>
+        <span class="review-badge__text"><strong>5.0</strong> · 20 reseñas verificadas en HuliHealth</span>
       </a>
     </div>
   </section>
@@ -517,13 +604,14 @@
         </div>
         <div class="reveal">
           <h3 class="contact__label">Ubicación</h3>
-          <p class="contact__value">Plaza Mayor, Rohrmoser<br>San José, Costa Rica</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=9.9451891,-84.1174972" target="_blank" rel="noopener" class="contact__value">Plaza Mayor, local 25-26<br>Rohrmoser, San José</a>
         </div>
         <div class="reveal">
           <h3 class="contact__label">Horario</h3>
           <p class="contact__value">Atención bajo<br>cita previa</p>
         </div>
       </div>
+      <p class="contact__note reveal">Formas de pago: tarjeta de crédito o débito, efectivo, SINPE Móvil y transferencia. Se acepta seguro Pan-American Life (PALIG).</p>
     </div>
   </section>
 

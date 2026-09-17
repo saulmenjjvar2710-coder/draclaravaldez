@@ -77,3 +77,31 @@ frames.forEach((frame) => {
     video.currentTime = 0;
   });
 });
+
+// Menú móvil: abrir/cerrar y cerrar al elegir una sección
+const nav = document.getElementById('nav');
+const navToggle = document.getElementById('nav-toggle');
+if (nav && navToggle) {
+  const setOpen = (open) => {
+    nav.classList.toggle('is-open', open);
+    document.body.classList.toggle('nav-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  };
+  navToggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+  nav.querySelectorAll('.nav__link').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+}
+
+// Resaltar en el menú la sección visible
+const navLinks = [...document.querySelectorAll('.nav__link')];
+const targets = navLinks.map((l) => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+if (targets.length) {
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((l) => l.classList.toggle('is-active', l.getAttribute('href') === '#' + entry.target.id));
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  targets.forEach((t) => spy.observe(t));
+}
