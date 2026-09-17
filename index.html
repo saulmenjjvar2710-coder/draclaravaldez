@@ -80,6 +80,7 @@
   <script type="text/javascript">var hh_widgets = ['Calendar'];(function(d, s, id) { var js, h = d.getElementsByTagName('head')[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//widgets.hulilabs.com/js/widgets/loader.js"; h.appendChild(js);}(document, 'script', 'huli-loader'));</script>
 </head>
 <body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
   <!-- ============ PRELOADER ============ -->
   <div class="loader" id="loader" aria-hidden="true">
@@ -95,7 +96,7 @@
       </a>
       <nav class="nav" id="nav" aria-label="Secciones del sitio">
         <a href="#nueva-clinica" class="nav__link">Clínica</a>
-        <a href="#sobre" class="nav__link">Sobre mí</a>
+        <a href="#porcelana" class="nav__link">Porcelana</a>
         <a href="#servicios" class="nav__link">Servicios</a>
         <a href="#antes-despues" class="nav__link">Resultados</a>
         <a href="#preguntas" class="nav__link">Preguntas</a>
@@ -115,8 +116,9 @@
   <section class="hero" id="inicio">
     <div class="hero__inner">
       <div class="hero__text">
+        <p class="hero__brand reveal"><span class="logo__name">DRA. CLARA</span><span class="logo__script">Valdez</span></p>
         <p class="eyebrow reveal">Odontología estética · San José, Costa Rica</p>
-        <h1 class="hero__title reveal">Transformemos<br><em>tu sonrisa</em></h1>
+        <h1 class="hero__title" data-split>Transformemos<br><em>tu sonrisa</em></h1>
         <p class="hero__sub reveal">Soy la Dra. Clara Valdez. Odontología general, cirugía oral y estética dental premium. Cada sonrisa que diseño comienza con una historia — esta es la mía.</p>
         <div class="hero__actions reveal">
           <a href="#agenda" class="btn btn--gold btn--lg">Reserva tu cita</a>
@@ -142,11 +144,11 @@
     <div class="marquee__track">
       <span>Carillas de Porcelana</span><i>·</i>
       <span>Ortodoncia Invisible</span><i>·</i>
-      <span>Diseño de Sonrisa</span><i>·</i>
+      <span>Microdiseño de Sonrisa</span><i>·</i>
       <span>Cirugía Oral</span><i>·</i>
       <span>Carillas de Porcelana</span><i>·</i>
       <span>Ortodoncia Invisible</span><i>·</i>
-      <span>Diseño de Sonrisa</span><i>·</i>
+      <span>Microdiseño de Sonrisa</span><i>·</i>
       <span>Cirugía Oral</span><i>·</i>
     </div>
   </div>
@@ -206,6 +208,53 @@
     </div>
   </section>
 
+  <!-- ============ PORCELANA ============ -->
+  <section class="porcelain section section--cream" id="porcelana">
+    <div class="container">
+      <div class="porcelain__head">
+        <div class="porcelain__copy">
+          <p class="eyebrow reveal">Mi especialidad</p>
+          <h2 class="section__title reveal">Carillas de<br><em>porcelana</em></h2>
+          <p class="reveal">Láminas ultrafinas de porcelana, diseñadas digitalmente y fabricadas a la medida de tu rostro. Con ellas corrijo forma, color y proporción cuidando al máximo tu diente natural.</p>
+          <ul class="porcelain__points reveal">
+            <li>Verás el diseño de tu sonrisa antes de empezar</li>
+            <li>Resultado natural: cambios sutiles, no dientes “falsos”</li>
+            <li>Pocas citas, un cambio para siempre</li>
+          </ul>
+          <a href="#agenda" class="btn btn--gold btn--lg reveal">Quiero una valoración</a>
+        </div>
+        <figure class="porcelain__video reveal">
+          <div class="video-frame">
+            <video playsinline preload="none" poster="assets/img/poster-porcelana.jpg">
+              <source src="assets/video/porcelana.mp4" type="video/mp4">
+            </video>
+            <button class="video-play" aria-label="Reproducir: así trabajo un caso de carillas de porcelana">
+              <span class="video-play__circle"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
+          </div>
+          <figcaption class="hero__caption">Así trabajo un caso de porcelana · 1:18</figcaption>
+        </figure>
+      </div>
+
+      <div class="viewer reveal" id="viewer">
+        <div class="viewer__top">
+          <p class="viewer__eyebrow">Casos reales de porcelana · explóralos</p>
+          <div class="viewer__tabs" role="tablist" aria-label="Casos de carillas de porcelana">
+            <button class="viewer__tab is-active" role="tab" aria-selected="true" data-case="f">Caso 01 <small>Carillas superiores</small></button>
+            <button class="viewer__tab" role="tab" aria-selected="false" data-case="m">Caso 02 <small>Carillas superiores</small></button>
+          </div>
+        </div>
+        <div class="viewer__stage">
+          <figure class="viewer__main">
+            <img id="viewer-img" src="assets/img/porcelana-f-frontal.jpg" alt="Caso 01 de carillas de porcelana — sonrisa de frente" data-lightbox>
+            <span class="viewer__hint">Toca para ampliar</span>
+          </figure>
+          <div class="viewer__thumbs" id="viewer-thumbs" role="list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ POR QUÉ CONFIAR ============ -->
   <section class="trust section section--dark" id="confianza">
     <div class="container">
@@ -252,7 +301,7 @@
     <div class="container">
       <p class="eyebrow reveal">Mis servicios</p>
       <h2 class="section__title reveal">Lo que puedo<br><em>hacer por ti</em></h2>
-      <div class="services__grid">
+      <div class="services__grid services__grid--4">
 
         <article class="service reveal">
           <div class="video-frame">
@@ -260,7 +309,7 @@
               <source src="assets/video/carillas.mp4" type="video/mp4">
             </video>
             <button class="video-play" aria-label="Reproducir video sobre carillas de porcelana">
-              <span class="video-play__circle"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="video-play__circle"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
           </div>
           <h3>Carillas de Porcelana</h3>
@@ -273,7 +322,7 @@
               <source src="assets/video/ortodoncia.mp4" type="video/mp4">
             </video>
             <button class="video-play" aria-label="Reproducir video sobre ortodoncia invisible">
-              <span class="video-play__circle"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="video-play__circle"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
           </div>
           <h3>Ortodoncia Invisible</h3>
@@ -281,16 +330,19 @@
         </article>
 
         <article class="service reveal">
-          <div class="video-frame">
-            <video playsinline preload="none" poster="assets/img/poster-resultado.jpg">
-              <source src="assets/video/carillas-resultado.mp4" type="video/mp4">
-            </video>
-            <button class="video-play" aria-label="Reproducir video de un cambio radical con porcelana">
-              <span class="video-play__circle"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-            </button>
+          <div class="service__img">
+            <img src="assets/img/poster-diseno.jpg" alt="Diseño digital de sonrisa en pantalla" loading="lazy">
           </div>
-          <h3>Rejuvenecimiento de Sonrisa</h3>
-          <p>Cambios radicales con porcelana: aquí te muestro mis casos reales, antes y después.</p>
+          <h3>Microdiseño de Sonrisa</h3>
+          <p>Sin desgastar tus dientes: añado en vez de quitar para mejorar forma, tamaño y color.</p>
+        </article>
+
+        <article class="service reveal">
+          <div class="service__img">
+            <img src="assets/img/clara-consultorio-1.jpg" alt="La Dra. Clara Valdez en su consultorio" loading="lazy">
+          </div>
+          <h3>Cirugía Oral</h3>
+          <p>Cordales, extracciones e implantes con precisión quirúrgica y un trato que te tranquiliza.</p>
         </article>
 
       </div>
@@ -317,10 +369,13 @@
     <div class="container">
       <p class="eyebrow reveal">Mi trabajo</p>
       <h2 class="section__title reveal">El detalle lo es todo</h2>
-      <div class="gallery__grid">
-        <figure class="reveal"><img src="assets/img/detalle-carilla.jpg" alt="Carilla de porcelana — detalle del trabajo de laboratorio" loading="lazy"></figure>
-        <figure class="reveal"><img src="assets/img/detalle-corona.jpg" alt="Corona de porcelana sobre implante — acabado natural" loading="lazy"></figure>
-        <figure class="reveal"><img src="assets/img/detalle-pieza.jpg" alt="Carilla de porcelana ultra estética — detalle" loading="lazy" style="object-position: 50% 30%"></figure>
+      <div class="gallery__grid gallery__grid--6">
+        <figure class="reveal"><img src="assets/img/detalle-carilla.jpg" alt="Carilla de porcelana — detalle del trabajo de laboratorio" loading="lazy" data-lightbox><figcaption>Carilla de porcelana · laboratorio</figcaption></figure>
+        <figure class="reveal"><img src="assets/img/porcelana-f-macro.jpg" alt="Carillas de porcelana en boca — detalle macro" loading="lazy" data-lightbox><figcaption>Carillas en boca · detalle</figcaption></figure>
+        <figure class="reveal"><img src="assets/img/detalle-corona.jpg" alt="Corona de porcelana sobre implante — acabado natural" loading="lazy" data-lightbox><figcaption>Corona sobre implante</figcaption></figure>
+        <figure class="reveal"><img src="assets/img/porcelana-m-frontal.jpg" alt="Sonrisa terminada con carillas de porcelana" loading="lazy" data-lightbox><figcaption>Caso terminado · porcelana</figcaption></figure>
+        <figure class="reveal"><img src="assets/img/detalle-pieza.jpg" alt="Carilla de porcelana ultra estética — detalle" loading="lazy" style="object-position: 50% 30%" data-lightbox><figcaption>Pieza ultra estética</figcaption></figure>
+        <figure class="reveal"><img src="assets/img/porcelana-f-lateral.jpg" alt="Perfil de una sonrisa con carillas de porcelana" loading="lazy" data-lightbox><figcaption>Perfil · porcelana</figcaption></figure>
       </div>
     </div>
   </section>
@@ -343,21 +398,17 @@
     <div class="container">
       <p class="eyebrow reveal">Resultados</p>
       <h2 class="section__title reveal">Antes y después<br><em>reales</em></h2>
+      <p class="bna__hint reveal">Desliza el círculo dorado sobre cada foto para ver el cambio.</p>
       <div class="bna__grid">
 
         <figure class="bna__card reveal">
-          <div class="bna__img">
-            <img src="assets/img/antes-despues-1.jpg" alt="Antes y después de un diseño de sonrisa con carillas — paciente real" loading="lazy">
-          </div>
-          <blockquote class="bna__quote">
-            <p>“¡Totalmente recomendada! Excelente atención y una ética profesional impecable. Con ella me realicé mi micro diseño y quedó excelente.”</p>
-            <cite>— Melani A. · Reseña verificada en HuliHealth</cite>
-          </blockquote>
-        </figure>
-
-        <figure class="bna__card reveal">
-          <div class="bna__img">
-            <img src="assets/img/antes-despues-2.jpg" alt="Antes y después de carillas de porcelana — paciente real" loading="lazy">
+          <div class="compare" style="--ar: 9 / 8">
+            <img class="compare__img compare__img--after" src="assets/img/bna-porcelana-despues.jpg" alt="Después — carillas de porcelana" loading="lazy">
+            <img class="compare__img compare__img--before" src="assets/img/bna-porcelana-antes.jpg" alt="Antes — carillas de porcelana" loading="lazy">
+            <span class="compare__label compare__label--before" aria-hidden="true">Antes</span>
+            <span class="compare__label compare__label--after" aria-hidden="true">Después</span>
+            <span class="compare__handle" aria-hidden="true"><i></i></span>
+            <input type="range" class="compare__range" min="0" max="100" value="50" aria-label="Desliza para comparar antes y después — carillas de porcelana">
           </div>
           <blockquote class="bna__quote">
             <p>“Excelente servicio, la Dra. Clara es un amor y no duele nada. La súper recomiendo.”</p>
@@ -366,8 +417,28 @@
         </figure>
 
         <figure class="bna__card reveal">
-          <div class="bna__img">
-            <img src="assets/img/antes-despues-3.jpg" alt="Antes y después de rejuvenecimiento de sonrisa — paciente real" loading="lazy">
+          <div class="compare" style="--ar: 5 / 2">
+            <img class="compare__img compare__img--after" src="assets/img/bna-diseno-despues.jpg" alt="Después — diseño de sonrisa" loading="lazy">
+            <img class="compare__img compare__img--before" src="assets/img/bna-diseno-antes.jpg" alt="Antes — diseño de sonrisa" loading="lazy">
+            <span class="compare__label compare__label--before" aria-hidden="true">Antes</span>
+            <span class="compare__label compare__label--after" aria-hidden="true">Después</span>
+            <span class="compare__handle" aria-hidden="true"><i></i></span>
+            <input type="range" class="compare__range" min="0" max="100" value="50" aria-label="Desliza para comparar antes y después — diseño de sonrisa">
+          </div>
+          <blockquote class="bna__quote">
+            <p>“¡Totalmente recomendada! Excelente atención y una ética profesional impecable. Con ella me realicé mi micro diseño y quedó excelente.”</p>
+            <cite>— Melani A. · Reseña verificada en HuliHealth</cite>
+          </blockquote>
+        </figure>
+
+        <figure class="bna__card reveal">
+          <div class="compare" style="--ar: 2 / 1">
+            <img class="compare__img compare__img--after" src="assets/img/bna-rejuvenecimiento-despues.jpg" alt="Después — rejuvenecimiento de sonrisa" loading="lazy">
+            <img class="compare__img compare__img--before" src="assets/img/bna-rejuvenecimiento-antes.jpg" alt="Antes — rejuvenecimiento de sonrisa" loading="lazy">
+            <span class="compare__label compare__label--before" aria-hidden="true">Antes</span>
+            <span class="compare__label compare__label--after" aria-hidden="true">Después</span>
+            <span class="compare__handle" aria-hidden="true"><i></i></span>
+            <input type="range" class="compare__range" min="0" max="100" value="50" aria-label="Desliza para comparar antes y después — rejuvenecimiento de sonrisa">
           </div>
           <blockquote class="bna__quote">
             <p>“Una doctora responsable, con conocimiento de lo que hace, delicada y amable. La recomiendo 100%.”</p>
@@ -376,8 +447,13 @@
         </figure>
 
         <figure class="bna__card reveal">
-          <div class="bna__img">
-            <img src="assets/img/antes-despues-4.jpg" alt="Antes y después de un aclaramiento dental — paciente real" loading="lazy">
+          <div class="compare" style="--ar: 4 / 5">
+            <img class="compare__img compare__img--after" src="assets/img/bna-aclaramiento-despues.jpg" alt="Después — aclaramiento dental" loading="lazy">
+            <img class="compare__img compare__img--before" src="assets/img/bna-aclaramiento-antes.jpg" alt="Antes — aclaramiento dental" loading="lazy">
+            <span class="compare__label compare__label--before" aria-hidden="true">Antes</span>
+            <span class="compare__label compare__label--after" aria-hidden="true">Después</span>
+            <span class="compare__handle" aria-hidden="true"><i></i></span>
+            <input type="range" class="compare__range" min="0" max="100" value="50" aria-label="Desliza para comparar antes y después — aclaramiento dental">
           </div>
           <blockquote class="bna__quote">
             <p>“Atención excelente y específica, la recomiendo 100%.”</p>
@@ -627,6 +703,13 @@
   <a href="https://wa.me/50672110934?text=Hola%20Dra.%20Clara%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escribir por WhatsApp">
     <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.5Z"/></svg>
   </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" id="lightbox-close" aria-label="Cerrar">×</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <p class="lightbox__caption" id="lightbox-caption"></p>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
