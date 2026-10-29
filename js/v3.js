@@ -296,87 +296,57 @@ if (cursor && matchMedia('(hover: hover) and (pointer: fine)').matches && !reduc
   tick();
 }
 
-// ---------- Capítulo 2: la sonrisa se diseña con el scroll ----------
+// ---------- Capítulo 2: el diseño se dibuja sobre la foto real con el scroll ----------
 const pin = $('#design-pin'), frame = $('#design-smile');
 if (pin && frame) {
-  const svg = $('svg', frame);
-  const lips = $$('.smile__lip', svg), teeth = $$('.t', svg), lower = $$('.tl', svg);
-  const guides = $$('.smile__guides path', svg), scan = $('.smile__scan', svg), sheen = $('.sheen', svg);
+  const before = $('.design__before', frame), after = $('.design__after', frame);
+  const grid = $('.ov-grid', frame), scan = $('.ov-scan', frame);
+  const guides = [$('.g-mid', frame), $('.g-gum', frame), $('.g-edge', frame), $('.g-ticks', frame)];
+  const dots = $$('.ov-dot', frame), labels = $$('.ov-labels text', frame);
   const stepsEl = $$('#design-steps li'), badge = $('#design-badge'), hint = $('#design-hint');
-  const upper = $('.smile__upper', svg), lowerG = $('.smile__lower', svg);
-  const order = [...teeth].sort((a, b) => (+a.className.baseVal.match(/t-(\d)/)[1]) - (+b.className.baseVal.match(/t-(\d)/)[1]));
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
   const seg = (p, a, b) => clamp((p - a) / (b - a));
   const ease = (t) => 1 - Math.pow(1 - t, 3);
-  const labels = ['Escaneo 3D', 'Diseño digital', 'Porcelana'];
+  const names = ['Escaneo', 'Diseño digital', 'Porcelana'];
   let last = -1;
   const render = () => {
     const r = pin.getBoundingClientRect();
     const total = r.height - window.innerHeight;
     const p = clamp(-r.top / total);
-    // Fase A · escaneo: labios + línea de escaneo
-    const lipP = ease(seg(p, 0, 0.18));
-    lips.forEach((l) => { l.style.strokeDashoffset = 1 - lipP; });
-    const sc = seg(p, 0.06, 0.34);
+    // A · escaneo: rejilla + línea que barre la foto
+    const gp = seg(p, 0, 0.08);
+    grid.style.opacity = gp * (1 - seg(p, 0.62, 0.72));
+    const sc = seg(p, 0.05, 0.3);
     scan.style.opacity = sc > 0 && sc < 1 ? 1 : 0;
-    const y = 110 + sc * 230; scan.setAttribute('y1', y); scan.setAttribute('y2', y);
-    // Fase B · dibujo diente por diente (del centro hacia afuera)
-    order.forEach((t, i) => {
-      const k = Math.floor(i / 2);
-      const tp = ease(seg(p, 0.28 + k * 0.045, 0.28 + k * 0.045 + 0.16));
-      t.style.strokeDashoffset = 1 - tp;
-    });
-    const lp = ease(seg(p, 0.5, 0.62));
-    lower.forEach((t) => { t.style.strokeDashoffset = 1 - lp; });
-    const gp = ease(seg(p, 0.34, 0.5)), gf = 1 - seg(p, 0.78, 0.86);
-    guides.forEach((g) => { g.style.strokeDashoffset = 1 - gp; g.style.opacity = gf; });
-    // Fase C · porcelana: relleno + brillo
+    const y = 60 + sc * 700; scan.setAttribute('y1', y); scan.setAttribute('y2', y);
+    // B · guías dibujadas una tras otra
+    const starts = [0.3, 0.38, 0.46, 0.54];
+    guides.forEach((g, i) => { g.style.strokeDashoffset = 1 - ease(seg(p, starts[i], starts[i] + 0.12)); });
+    dots.forEach((d) => { d.style.opacity = seg(p, 0.38, 0.42); });
+    labels.forEach((t, i) => { t.style.opacity = seg(p, 0.36 + i * 0.08, 0.4 + i * 0.08); });
+    // C · la porcelana aparece: fundido al después, las guías se desvanecen
     const fp = ease(seg(p, 0.66, 0.84));
-    upper.style.setProperty('--fill', fp);
-    teeth.forEach((t) => { t.style.fill = `rgba(247,241,220,${fp})`; t.style.stroke = fp > 0.5 ? 'rgba(199,160,122,0.55)' : ''; });
-    lower.forEach((t) => { t.style.fill = `rgba(233,220,194,${fp})`; });
-    const sp = seg(p, 0.84, 1);
-    sheen.style.opacity = sp > 0 && sp < 1 ? 1 : 0;
-    sheen.setAttribute('transform', `skewX(-20) translate(${sp * 1000} 0)`);
+    after.style.opacity = fp;
+    const gf = 1 - seg(p, 0.7, 0.82);
+    guides.forEach((g) => { g.style.opacity = gf; });
+    dots.forEach((d) => { if (p > 0.7) d.style.opacity = gf; });
+    labels.forEach((t) => { if (p > 0.7) t.style.opacity = gf; });
     // textos
     const phase = p < 0.3 ? 0 : p < 0.66 ? 1 : 2;
     if (phase !== last) {
-      last = phase;
-      frame.dataset.phase = phase;
+      last = phase; frame.dataset.phase = phase;
       stepsEl.forEach((li, i) => li.classList.toggle('is-on', i === phase));
-      badge.textContent = labels[phase];
+      badge.textContent = names[phase];
     }
     hint.classList.toggle('is-done', p > 0.9);
   };
-  let raf = null;
-  const onS = () => { if (raf) return; raf = requestAnimationFrame(() => { raf = null; render(); }); };
-  window.addEventListener('scroll', onS, { passive: true });
-  window.addEventListener('resize', onS);
+  window.addEventListener('scroll', render, { passive: true });
+  window.addEventListener('resize', render);
   render();
-  if (reduced) { // sin animación: todo dibujado y relleno
-    [...lips, ...teeth, ...lower].forEach((e) => { e.style.strokeDashoffset = 0; });
-    teeth.forEach((t) => { t.style.fill = '#F7F1DC'; });
-  }
 }
 
-// ---------- Capítulo 3: tratamientos (hover o al entrar en pantalla) ----------
-const treats = $$('.treat');
-if (treats.length) {
-  const canHover = matchMedia('(hover: hover)').matches;
-  const treatObs = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (canHover) return; // en escritorio manda el hover
-      e.target.classList.toggle('is-on', e.isIntersecting);
-    });
-  }, { threshold: 0.6 });
-  treats.forEach((card) => {
-    treatObs.observe(card);
-    if (canHover) {
-      card.addEventListener('mouseenter', () => card.classList.add('is-on'));
-      card.addEventListener('mouseleave', () => card.classList.remove('is-on'));
-    }
-  });
-}
+// ---------- Capítulo 3: la foto lleva al test ----------
+$$('.treats .treat__media').forEach((m) => m.addEventListener('click', () => { location.hash = '#test'; }));
 
 // ---------- Capítulo 5: el después aparece donde llevas el cursor ----------
 const spot = $('#spot');

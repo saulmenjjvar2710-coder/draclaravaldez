@@ -564,3 +564,88 @@ a.bento__item:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(
   .hero__smile .smile .t { fill: #F7F1DC; }
   .ribbon__track, .hero__glow, .design__hint span { animation: none !important; }
 }
+
+/* ============================================================
+   V3.2 · material real: hero fotográfico, diseño sobre la foto,
+   tratamientos con fotos, tira de casos, foto en la clínica
+   ============================================================ */
+
+/* ---------- HERO fotográfico (Ken Burns con 3 fotos) ---------- */
+.hero--photo { display: grid; align-items: end; background: #1a0e07; }
+.hero__inner, .hero__smile, .hero__glow { display: none; }
+.hero__slides { position: absolute; inset: 0; overflow: hidden; }
+.hero__slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; opacity: 0; animation: kb 24s ease-in-out infinite; transform-origin: 55% 50%; }
+.hero__slide:nth-child(2) { animation-delay: 8s; object-position: 50% 30%; }
+.hero__slide:nth-child(3) { animation-delay: 16s; }
+@keyframes kb { 0% { opacity: 0; transform: scale(1.06); } 6% { opacity: 1; } 33% { opacity: 1; transform: scale(1.16); } 40% { opacity: 0; transform: scale(1.18); } 100% { opacity: 0; transform: scale(1.06); } }
+.hero--photo .hero__shade { display: block; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(26,14,7,0.82) 0%, rgba(26,14,7,0.55) 45%, rgba(26,14,7,0.15) 100%), linear-gradient(180deg, rgba(26,14,7,0.35) 0%, rgba(26,14,7,0) 35%, rgba(26,14,7,0.85) 100%); }
+.hero--photo .hero__content { position: relative; width: min(1240px, 92%); margin-inline: auto; padding: 8.5rem 0 6.5rem; max-width: none; }
+.hero--photo .hero__content > * { max-width: 42rem; }
+.hero--photo .hero__title { font-size: clamp(3rem, 8vw, 6.4rem); text-shadow: 0 10px 40px rgba(0,0,0,0.35); }
+.hero__caption { position: absolute; right: 1.6rem; bottom: 1.4rem; display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(253,252,232,0.6); }
+.hero__caption span:first-child { color: var(--gold-light); }
+@media (max-width: 759px) {
+  .hero--photo .hero__content { padding: 7rem 0 5.5rem; }
+  .hero--photo .hero__title { font-size: clamp(2.6rem, 13vw, 3.6rem); }
+  .hero__caption { display: none; }
+  .hero--photo .hero__shade { background: linear-gradient(180deg, rgba(26,14,7,0.55) 0%, rgba(26,14,7,0.25) 35%, rgba(26,14,7,0.9) 75%); }
+}
+
+/* ---------- Capítulo 2 · diseño sobre la foto real ---------- */
+.design__frame { padding: 0; overflow: hidden; aspect-ratio: 9 / 8; background: #000; border: 0; border-radius: var(--radius); box-shadow: 0 30px 80px rgba(0,0,0,0.45); }
+.design__frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.design__before { filter: saturate(0.6) brightness(0.8); transition: filter 0.8s ease; }
+.design__frame[data-phase="1"] .design__before { filter: saturate(0.85) brightness(0.95); }
+.design__after { opacity: 0; }
+.design__ov { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ov-grid path { fill: none; stroke: rgba(253,252,232,0.28); stroke-width: 1; stroke-dasharray: 3 7; }
+.ov-scan { stroke: var(--gold-light); stroke-width: 2; opacity: 0; filter: drop-shadow(0 0 8px rgba(217,188,156,0.9)); }
+.ov-g { fill: none; stroke: var(--gold-light); stroke-width: 2.4; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.6)); }
+.g-ticks { stroke-width: 1.6; }
+.ov-dot { fill: var(--gold-light); opacity: 0; }
+.ov-labels text { font-family: var(--font-sans); font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; fill: var(--cream); opacity: 0; paint-order: stroke; stroke: rgba(26,14,7,0.75); stroke-width: 4px; }
+.design__tag { position: absolute; top: 0.9rem; right: 0.9rem; font-size: 0.64rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream); background: rgba(57,30,16,0.6); padding: 0.38rem 0.75rem; border-radius: 999px; transition: opacity 0.4s; }
+.design__tag--after { opacity: 0; background: var(--gold); color: var(--ink); }
+.design__frame[data-phase="2"] .design__tag--before { opacity: 0; }
+.design__frame[data-phase="2"] .design__tag--after { opacity: 1; }
+.design__badge { z-index: 2; }
+.design__fig figcaption { margin-top: 0.8rem; color: rgba(253,252,232,0.55); }
+.design__frame[data-phase="2"] .ov-grid { opacity: 0; transition: opacity 0.6s; }
+@media (max-width: 759px) {
+  .design__frame { aspect-ratio: 1 / 1; }
+  .design__fig figcaption { display: none; }
+  .ov-labels text { font-size: 20px; }
+}
+
+/* ---------- Capítulo 3 · tratamientos con fotos ---------- */
+.treats .treat__media { aspect-ratio: 4 / 5; display: block; background: #1a0e07; cursor: pointer; }
+.treats .treat__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease), filter 0.6s; }
+.treats .treat:hover .treat__media img { transform: scale(1.07); }
+.treats .treat__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,14,7,0) 55%, rgba(26,14,7,0.7) 100%); pointer-events: none; }
+.treats .treat__more-link { position: absolute; left: 1rem; bottom: 1rem; z-index: 1; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cream); opacity: 0; transform: translateY(6px); transition: opacity 0.4s, transform 0.5s var(--ease); }
+.treats .treat:hover .treat__more-link { opacity: 1; transform: none; }
+.treats .treat__tag { z-index: 1; }
+
+/* ---------- Tira de fotos ---------- */
+.film { overflow: hidden; background: var(--ink); padding: 0.6rem 0; }
+.film__track { display: flex; gap: 0.6rem; width: max-content; animation: film 70s linear infinite; }
+.film:hover .film__track { animation-play-state: paused; }
+.film__track img { height: clamp(150px, 24vw, 260px); width: auto; border-radius: 10px; object-fit: cover; cursor: zoom-in; transition: transform 0.5s var(--ease), opacity 0.4s; opacity: 0.92; }
+.film__track img:hover { transform: translateY(-4px); opacity: 1; }
+@keyframes film { to { transform: translateX(-50%); } }
+
+/* ---------- Clínica · foto en el bento ---------- */
+.bento__item--photo { padding: 0; overflow: hidden; margin: 0; position: relative; min-height: 240px; border: 0; }
+.bento__item--photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; cursor: zoom-in; transition: transform 1.2s var(--ease); }
+.bento__item--photo:hover img { transform: scale(1.04); }
+.bento__item--photo figcaption { position: absolute; left: 1rem; bottom: 0.9rem; margin: 0; text-align: left; color: var(--cream); font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+@media (min-width: 760px) {
+  .bento { grid-template-columns: repeat(4, 1fr); }
+  .bento__item--photo { grid-column: span 2; grid-row: span 2; }
+  .bento__item--map { grid-row: span 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__slide { animation: none; opacity: 1; }
+  .hero__slide:nth-child(n+2) { display: none; }
+  .film__track { animation: none; }
+}
