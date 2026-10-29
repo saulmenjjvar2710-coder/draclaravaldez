@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dra. Clara Valdez — Una sonrisa, contada paso a paso | San José, Costa Rica</title>
-  <meta name="description" content="Odontología estética en Plaza Mayor, Rohrmoser, San José. Carillas de porcelana, ortodoncia invisible, microdiseño de sonrisa e implantes. Vive la consulta antes de agendarla.">
+  <title>Dra. Clara Valdez — Diseño sonrisas de porcelana | San José, Costa Rica</title>
+  <meta name="description" content="Cirugía y estética dental en Plaza Mayor, Rohrmoser, San José. Carillas de porcelana, ortodoncia invisible, microdiseño de sonrisa e implantes. Diseñamos tu sonrisa antes de tocarla.">
   <meta name="robots" content="noindex">
-  <meta property="og:title" content="Dra. Clara Valdez — Una sonrisa, contada paso a paso">
+  <meta name="theme-color" content="#391E10">
+  <meta property="og:title" content="Dra. Clara Valdez — Diseño sonrisas de porcelana">
   <meta property="og:description" content="Carillas de porcelana, ortodoncia invisible, microdiseño de sonrisa e implantes en San José, Costa Rica.">
-  <meta property="og:image" content="assets/img/hero-poster.jpg">
+  <meta property="og:image" content="assets/img/porcelana-f-frontal.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
     "@type": "Dentist",
     "name": "Dra. Clara Valdez — Cirugía y Estética Dental",
     "url": "https://draclaravaldez.com",
-    "image": "https://draclaravaldez.com/assets/img/hero-poster.jpg",
+    "image": "https://draclaravaldez.com/assets/img/porcelana-f-frontal.jpg",
     "telephone": "+50672110934",
     "address": { "@type": "PostalAddress", "streetAddress": "Plaza Mayor, local 25-26, planta baja, Rohrmoser", "addressLocality": "San José", "addressRegion": "San José", "addressCountry": "CR" },
     "geo": { "@type": "GeoCoordinates", "latitude": 9.9451891, "longitude": -84.1174972 },
@@ -30,6 +31,7 @@
 </head>
 <body>
   <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
 
   <!-- ============ PRELOADER ============ -->
   <div class="loader" id="loader" aria-hidden="true">
@@ -45,10 +47,11 @@
       </a>
       <nav class="nav" id="nav" aria-label="Capítulos">
         <a href="#primera-cita" class="nav__link"><i>01</i>La primera cita</a>
-        <a href="#servicios" class="nav__link"><i>02</i>Tratamientos</a>
-        <a href="#disena" class="nav__link"><i>03</i>Diseña tu sonrisa</a>
-        <a href="#cambio" class="nav__link"><i>04</i>El cambio</a>
-        <a href="#clinica" class="nav__link"><i>05</i>Mi clínica</a>
+        <a href="#diseno" class="nav__link"><i>02</i>Diseño</a>
+        <a href="#servicios" class="nav__link"><i>03</i>Tratamientos</a>
+        <a href="#test" class="nav__link"><i>04</i>Test</a>
+        <a href="#cambio" class="nav__link"><i>05</i>El cambio</a>
+        <a href="#historia" class="nav__link"><i>06</i>Mi historia</a>
         <a href="#agenda" class="nav__link nav__link--cta">Agenda tu cita</a>
       </nav>
       <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
@@ -59,39 +62,69 @@
   <ol class="dots" id="dots" aria-hidden="true">
     <li><a href="#inicio" data-dot="inicio"><span>Inicio</span></a></li>
     <li><a href="#primera-cita" data-dot="primera-cita"><span>01 · La primera cita</span></a></li>
-    <li><a href="#servicios" data-dot="servicios"><span>02 · Tratamientos</span></a></li>
-    <li><a href="#disena" data-dot="disena"><span>03 · Diseña tu sonrisa</span></a></li>
-    <li><a href="#cambio" data-dot="cambio"><span>04 · El cambio</span></a></li>
-    <li><a href="#clinica" data-dot="clinica"><span>05 · Mi clínica</span></a></li>
-    <li><a href="#agenda" data-dot="agenda"><span>06 · Tu turno</span></a></li>
+    <li><a href="#diseno" data-dot="diseno"><span>02 · Así diseño tu sonrisa</span></a></li>
+    <li><a href="#servicios" data-dot="servicios"><span>03 · Tratamientos</span></a></li>
+    <li><a href="#test" data-dot="test"><span>04 · Test</span></a></li>
+    <li><a href="#cambio" data-dot="cambio"><span>05 · El cambio</span></a></li>
+    <li><a href="#historia" data-dot="historia"><span>06 · Mi historia</span></a></li>
+    <li><a href="#clinica" data-dot="clinica"><span>07 · Mi clínica</span></a></li>
+    <li><a href="#agenda" data-dot="agenda"><span>08 · Tu turno</span></a></li>
   </ol>
 
   <!-- ============ CAPÍTULO 0 · APERTURA ============ -->
   <section class="hero" id="inicio">
-    <video class="hero__bg" autoplay muted loop playsinline poster="assets/img/poster-hero-bg.jpg" aria-hidden="true">
-      <source src="assets/video/hero-bg.mp4" type="video/mp4">
-    </video>
-    <div class="hero__shade"></div>
-    <div class="hero__content">
-      <p class="hero__brand reveal"><span class="logo__name">DRA. CLARA</span><span class="logo__script">Valdez</span></p>
-      <p class="eyebrow eyebrow--light reveal">Odontología estética · San José, Costa Rica</p>
-      <div class="hero__lines" id="hero-lines" aria-live="polite">
-        <p>Tenía desgastes.</p>
-        <p>No quería dientes falsos.</p>
-        <p>Hoy sonríe sin pensarlo.</p>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <div class="hero__content">
+        <p class="hero__brand reveal"><span class="logo__name">DRA. CLARA</span><span class="logo__script">Valdez</span></p>
+        <p class="eyebrow eyebrow--light reveal">Cirugía y estética dental · Rohrmoser, San José</p>
+        <h1 class="hero__title" data-split>Diseño sonrisas<br><em>de porcelana</em></h1>
+        <div class="hero__lines" id="hero-lines" aria-live="polite">
+          <p>Primero la dibujo contigo.</p>
+          <p>La ves en pantalla antes de empezar.</p>
+          <p>Y solo entonces la hacemos.</p>
+        </div>
+        <p class="hero__sub reveal">Soy la Dra. Clara Valdez. Antes de tocar un solo diente, diseñamos juntos la sonrisa que quieres y la ves terminada en digital. Nada de sorpresas.</p>
+        <div class="hero__actions reveal">
+          <a href="#agenda" class="btn btn--gold btn--lg magnetic">Reserva tu cita</a>
+          <a href="#diseno" class="btn btn--ghost btn--lg magnetic">Ver cómo la diseño</a>
+        </div>
       </div>
-      <h1 class="hero__title" data-split>Una sonrisa,<br><em>contada paso a paso</em></h1>
-      <p class="hero__sub reveal">Soy la Dra. Clara Valdez. Antes de tocar un solo diente, te muestro cómo va a quedar. Baja y vive la consulta antes de agendarla.</p>
-      <div class="hero__actions reveal">
-        <a href="#agenda" class="btn btn--gold btn--lg magnetic">Reserva tu cita</a>
-        <button class="btn btn--ghost btn--lg magnetic" data-video="assets/video/historia.mp4" data-video-title="Mi historia · 1:38">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          Ver mi historia
-        </button>
-      </div>
+      <figure class="hero__smile" id="hero-smile" aria-label="Silueta de una sonrisa diseñada">
+        <svg class="smile" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="hero-ivory" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFEF4"/><stop offset="0.55" stop-color="#F7F1DC"/><stop offset="1" stop-color="#E9DCC2"/></linearGradient>
+    <linearGradient id="hero-sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="hero-mouth"><path d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214 C600 342 200 342 86 214 Z"/></clipPath>
+    <clipPath id="hero-teeth"><path d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></clipPath>
+  </defs>
+  <g class="smile__grid"><path d="M60 100 H740 M60 160 H740 M60 220 H740 M60 280 H740 M60 340 H740 M160 60 V360 M280 60 V360 M400 60 V360 M520 60 V360 M640 60 V360"/></g>
+  <g class="smile__teeth" clip-path="url(#hero-mouth)">
+    <g class="smile__lower"><path class="tl" pathLength="1" d="M408.5 297.8 H438.5 Q445.5 297.8 445.5 304.8 V321.8 Q445.5 331.8 435.5 332.8 Q423.5 335.3 411.5 332.8 Q401.5 331.8 401.5 321.8 V304.8 Q401.5 297.8 408.5 297.8 Z"/><path class="tl" pathLength="1" d="M361.5 297.8 H391.5 Q398.5 297.8 398.5 304.8 V321.8 Q398.5 331.8 388.5 332.8 Q376.5 335.3 364.5 332.8 Q354.5 331.8 354.5 321.8 V304.8 Q354.5 297.8 361.5 297.8 Z"/><path class="tl" pathLength="1" d="M455.5 296.1 H481.5 Q488.5 296.1 488.5 303.1 V320.1 Q488.5 330.1 478.5 331.1 Q468.5 333.6 458.5 331.1 Q448.5 330.1 448.5 320.1 V303.1 Q448.5 296.1 455.5 296.1 Z"/><path class="tl" pathLength="1" d="M318.5 296.1 H344.5 Q351.5 296.1 351.5 303.1 V320.1 Q351.5 330.1 341.5 331.1 Q331.5 333.6 321.5 331.1 Q311.5 330.1 311.5 320.1 V303.1 Q311.5 296.1 318.5 296.1 Z"/><path class="tl" pathLength="1" d="M498.5 292.8 H528.5 Q535.5 292.8 535.5 299.8 V316.8 Q535.5 326.8 525.5 327.8 Q513.5 330.3 501.5 327.8 Q491.5 326.8 491.5 316.8 V299.8 Q491.5 292.8 498.5 292.8 Z"/><path class="tl" pathLength="1" d="M271.5 292.8 H301.5 Q308.5 292.8 308.5 299.8 V316.8 Q308.5 326.8 298.5 327.8 Q286.5 330.3 274.5 327.8 Q264.5 326.8 264.5 316.8 V299.8 Q264.5 292.8 271.5 292.8 Z"/><path class="tl" pathLength="1" d="M545.5 288.2 H567.5 Q574.5 288.2 574.5 295.2 V312.2 Q574.5 322.2 564.5 323.2 Q556.5 325.7 548.5 323.2 Q538.5 322.2 538.5 312.2 V295.2 Q538.5 288.2 545.5 288.2 Z"/><path class="tl" pathLength="1" d="M232.5 288.2 H254.5 Q261.5 288.2 261.5 295.2 V312.2 Q261.5 322.2 251.5 323.2 Q243.5 325.7 235.5 323.2 Q225.5 322.2 225.5 312.2 V295.2 Q225.5 288.2 232.5 288.2 Z"/></g>
+    <g class="smile__upper" style="--ivory:url(#hero-ivory)"><path class="t t-0 sr" pathLength="1" d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path class="t t-0 sl" pathLength="1" d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path class="t t-1 sr" pathLength="1" d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path class="t t-1 sl" pathLength="1" d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path class="t t-2 sr" pathLength="1" d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path class="t t-2 sl" pathLength="1" d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path class="t t-3 sr" pathLength="1" d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path class="t t-3 sl" pathLength="1" d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path class="t t-4 sr" pathLength="1" d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path class="t t-4 sl" pathLength="1" d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path class="t t-5 sr" pathLength="1" d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path class="t t-5 sl" pathLength="1" d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></g>
+    <g class="smile__sheen" clip-path="url(#hero-teeth)"><rect class="sheen" x="-200" y="150" width="160" height="160" fill="url(#hero-sheen)" transform="skewX(-20)"/></g>
+  </g>
+  <g class="smile__guides"><path class="g-mid" pathLength="1" d="M400 120 V320"/><path class="g-curve" pathLength="1" d="M130 232 Q400 320 670 232"/><path class="g-gum" pathLength="1" d="M130 206 Q400 150 670 206"/></g>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 206 C176 134 332 112 400 146 C468 112 624 134 704 206"/>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 222 C200 356 600 356 704 222"/>
+  <path class="smile__lip smile__lip--u" pathLength="1" d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214"/>
+  <path class="smile__lip smile__lip--l" pathLength="1" d="M86 214 C200 342 600 342 714 214"/>
+  <g class="smile__implant"><path class="imp-screw" pathLength="1" d="M300 186 V140 M292 150 H308 M292 160 H308 M292 170 H308 M292 180 H308"/><path class="imp-ghost" d="M278 184 H322 V232 Q322 248 300 250 Q278 248 278 232 Z"/></g>
+  <line class="smile__scan" x1="60" x2="740" y1="120" y2="120"/>
+</svg>
+        <figcaption><span>Boceto digital</span><span>Porcelana</span></figcaption>
+      </figure>
     </div>
     <a href="#primera-cita" class="hero__scroll" aria-label="Bajar al capítulo 1"><span></span>Desliza</a>
   </section>
+
+  <!-- Cinta -->
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon__track">
+      <span>Carillas de porcelana</span><i>✦</i><span>Diseño digital de sonrisa</span><i>✦</i><span>Ortodoncia invisible</span><i>✦</i><span>Microdiseño</span><i>✦</i><span>Implantes</span><i>✦</i><span>Cirugía oral</span><i>✦</i>
+      <span>Carillas de porcelana</span><i>✦</i><span>Diseño digital de sonrisa</span><i>✦</i><span>Ortodoncia invisible</span><i>✦</i><span>Microdiseño</span><i>✦</i><span>Implantes</span><i>✦</i><span>Cirugía oral</span><i>✦</i>
+    </div>
+  </div>
 
   <!-- ============ CAPÍTULO 1 · LA PRIMERA CITA ============ -->
   <section class="chapter chapter--cream story" id="primera-cita">
@@ -126,12 +159,12 @@
         <figure class="story__media">
           <div class="phone">
             <video id="story-video" muted playsinline preload="metadata" poster="assets/img/poster-primera-cita.jpg">
-              <source src="assets/video/primera-cita.mp4" type="video/mp4">
+              <source src="assets/video/primera-cita-v2.mp4" type="video/mp4">
             </video>
             <div class="phone__bar"><i id="story-bar"></i></div>
           </div>
           <figcaption>
-            <button class="link-play" data-video="assets/video/primera-cita.mp4" data-video-title="Qué hacemos en una cita · 0:42">
+            <button class="link-play" data-video="assets/video/primera-cita-v2.mp4" data-video-title="Qué hacemos en una cita · 0:42">
               <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
               Verlo completo con sonido
             </button>
@@ -141,52 +174,161 @@
     </div>
   </section>
 
-  <!-- ============ CAPÍTULO 2 · TRATAMIENTOS ============ -->
-  <section class="chapter chapter--dark" id="servicios">
+  <!-- ============ CAPÍTULO 2 · ASÍ DISEÑO TU SONRISA ============ -->
+  <section class="chapter chapter--dark design" id="diseno">
+    <div class="design__pin" id="design-pin">
+      <div class="design__stage">
+        <div class="design__copy">
+          <p class="chapter__label chapter__label--light"><i>Capítulo 02</i>Así diseño tu sonrisa</p>
+          <h2 class="section__title">Primero la dibujo.<br><em>Después la hacemos.</em></h2>
+          <ol class="design__steps" id="design-steps">
+            <li class="is-on" data-step="0"><b>01</b><h3>Escaneo tu boca en 3D</h3><p>Sin moldes ni pastas. En minutos tengo cada diente, cada encía y cómo se ven al sonreír.</p></li>
+            <li data-step="1"><b>02</b><h3>Dibujo diente por diente</h3><p>Proporción, línea media, curva de la sonrisa. Lo ajustamos juntos en pantalla hasta que digas “esa es”.</p></li>
+            <li data-step="2"><b>03</b><h3>La llevamos a porcelana</h3><p>Láminas ultrafinas hechas a tu medida, con el color y la textura de un diente natural. Nadie nota que están. Tú sí.</p></li>
+          </ol>
+          <p class="design__hint" id="design-hint"><span></span>Sigue bajando</p>
+        </div>
+        <figure class="design__fig">
+          <div class="design__frame" id="design-smile" data-phase="0">
+            <svg class="smile" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="design-ivory" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFEF4"/><stop offset="0.55" stop-color="#F7F1DC"/><stop offset="1" stop-color="#E9DCC2"/></linearGradient>
+    <linearGradient id="design-sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="design-mouth"><path d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214 C600 342 200 342 86 214 Z"/></clipPath>
+    <clipPath id="design-teeth"><path d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></clipPath>
+  </defs>
+  <g class="smile__grid"><path d="M60 100 H740 M60 160 H740 M60 220 H740 M60 280 H740 M60 340 H740 M160 60 V360 M280 60 V360 M400 60 V360 M520 60 V360 M640 60 V360"/></g>
+  <g class="smile__teeth" clip-path="url(#design-mouth)">
+    <g class="smile__lower"><path class="tl" pathLength="1" d="M408.5 297.8 H438.5 Q445.5 297.8 445.5 304.8 V321.8 Q445.5 331.8 435.5 332.8 Q423.5 335.3 411.5 332.8 Q401.5 331.8 401.5 321.8 V304.8 Q401.5 297.8 408.5 297.8 Z"/><path class="tl" pathLength="1" d="M361.5 297.8 H391.5 Q398.5 297.8 398.5 304.8 V321.8 Q398.5 331.8 388.5 332.8 Q376.5 335.3 364.5 332.8 Q354.5 331.8 354.5 321.8 V304.8 Q354.5 297.8 361.5 297.8 Z"/><path class="tl" pathLength="1" d="M455.5 296.1 H481.5 Q488.5 296.1 488.5 303.1 V320.1 Q488.5 330.1 478.5 331.1 Q468.5 333.6 458.5 331.1 Q448.5 330.1 448.5 320.1 V303.1 Q448.5 296.1 455.5 296.1 Z"/><path class="tl" pathLength="1" d="M318.5 296.1 H344.5 Q351.5 296.1 351.5 303.1 V320.1 Q351.5 330.1 341.5 331.1 Q331.5 333.6 321.5 331.1 Q311.5 330.1 311.5 320.1 V303.1 Q311.5 296.1 318.5 296.1 Z"/><path class="tl" pathLength="1" d="M498.5 292.8 H528.5 Q535.5 292.8 535.5 299.8 V316.8 Q535.5 326.8 525.5 327.8 Q513.5 330.3 501.5 327.8 Q491.5 326.8 491.5 316.8 V299.8 Q491.5 292.8 498.5 292.8 Z"/><path class="tl" pathLength="1" d="M271.5 292.8 H301.5 Q308.5 292.8 308.5 299.8 V316.8 Q308.5 326.8 298.5 327.8 Q286.5 330.3 274.5 327.8 Q264.5 326.8 264.5 316.8 V299.8 Q264.5 292.8 271.5 292.8 Z"/><path class="tl" pathLength="1" d="M545.5 288.2 H567.5 Q574.5 288.2 574.5 295.2 V312.2 Q574.5 322.2 564.5 323.2 Q556.5 325.7 548.5 323.2 Q538.5 322.2 538.5 312.2 V295.2 Q538.5 288.2 545.5 288.2 Z"/><path class="tl" pathLength="1" d="M232.5 288.2 H254.5 Q261.5 288.2 261.5 295.2 V312.2 Q261.5 322.2 251.5 323.2 Q243.5 325.7 235.5 323.2 Q225.5 322.2 225.5 312.2 V295.2 Q225.5 288.2 232.5 288.2 Z"/></g>
+    <g class="smile__upper" style="--ivory:url(#design-ivory)"><path class="t t-0 sr" pathLength="1" d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path class="t t-0 sl" pathLength="1" d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path class="t t-1 sr" pathLength="1" d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path class="t t-1 sl" pathLength="1" d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path class="t t-2 sr" pathLength="1" d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path class="t t-2 sl" pathLength="1" d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path class="t t-3 sr" pathLength="1" d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path class="t t-3 sl" pathLength="1" d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path class="t t-4 sr" pathLength="1" d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path class="t t-4 sl" pathLength="1" d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path class="t t-5 sr" pathLength="1" d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path class="t t-5 sl" pathLength="1" d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></g>
+    <g class="smile__sheen" clip-path="url(#design-teeth)"><rect class="sheen" x="-200" y="150" width="160" height="160" fill="url(#design-sheen)" transform="skewX(-20)"/></g>
+  </g>
+  <g class="smile__guides"><path class="g-mid" pathLength="1" d="M400 120 V320"/><path class="g-curve" pathLength="1" d="M130 232 Q400 320 670 232"/><path class="g-gum" pathLength="1" d="M130 206 Q400 150 670 206"/></g>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 206 C176 134 332 112 400 146 C468 112 624 134 704 206"/>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 222 C200 356 600 356 704 222"/>
+  <path class="smile__lip smile__lip--u" pathLength="1" d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214"/>
+  <path class="smile__lip smile__lip--l" pathLength="1" d="M86 214 C200 342 600 342 714 214"/>
+  <g class="smile__implant"><path class="imp-screw" pathLength="1" d="M300 186 V140 M292 150 H308 M292 160 H308 M292 170 H308 M292 180 H308"/><path class="imp-ghost" d="M278 184 H322 V232 Q322 248 300 250 Q278 248 278 232 Z"/></g>
+  <line class="smile__scan" x1="60" x2="740" y1="120" y2="120"/>
+</svg>
+            <span class="design__badge" id="design-badge">Escaneo</span>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAPÍTULO 3 · TRATAMIENTOS ============ -->
+  <section class="chapter chapter--cream treats" id="servicios">
     <div class="container">
-      <p class="chapter__label chapter__label--light reveal"><i>Capítulo 02</i>Tratamientos</p>
+      <p class="chapter__label reveal"><i>Capítulo 03</i>Tratamientos</p>
       <h2 class="section__title reveal">Lo que puedo<br><em>hacer por ti</em></h2>
-      <p class="chapter__intro chapter__intro--light reveal">Pasa el cursor sobre cada video para verlo. Toca para escucharlo completo.</p>
+      <p class="chapter__intro reveal">Pasa el cursor sobre cada sonrisa para ver qué cambia.</p>
 
       <div class="treat__grid">
-        <article class="treat reveal" data-video="assets/video/porcelana.mp4" data-video-title="Carillas de porcelana · 1:18">
-          <div class="treat__media">
-            <video muted playsinline preload="none" loop poster="assets/img/poster-porcelana.jpg"><source src="assets/video/porcelana.mp4" type="video/mp4"></video>
-            <span class="treat__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
+        <article class="treat treat--porcelana reveal" data-fx="porcelana">
+          <div class="treat__media"><div class="treat__smile"><svg class="smile" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="t-porcelana-ivory" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFEF4"/><stop offset="0.55" stop-color="#F7F1DC"/><stop offset="1" stop-color="#E9DCC2"/></linearGradient>
+    <linearGradient id="t-porcelana-sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="t-porcelana-mouth"><path d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214 C600 342 200 342 86 214 Z"/></clipPath>
+    <clipPath id="t-porcelana-teeth"><path d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></clipPath>
+  </defs>
+  <g class="smile__grid"><path d="M60 100 H740 M60 160 H740 M60 220 H740 M60 280 H740 M60 340 H740 M160 60 V360 M280 60 V360 M400 60 V360 M520 60 V360 M640 60 V360"/></g>
+  <g class="smile__teeth" clip-path="url(#t-porcelana-mouth)">
+    <g class="smile__lower"><path class="tl" pathLength="1" d="M408.5 297.8 H438.5 Q445.5 297.8 445.5 304.8 V321.8 Q445.5 331.8 435.5 332.8 Q423.5 335.3 411.5 332.8 Q401.5 331.8 401.5 321.8 V304.8 Q401.5 297.8 408.5 297.8 Z"/><path class="tl" pathLength="1" d="M361.5 297.8 H391.5 Q398.5 297.8 398.5 304.8 V321.8 Q398.5 331.8 388.5 332.8 Q376.5 335.3 364.5 332.8 Q354.5 331.8 354.5 321.8 V304.8 Q354.5 297.8 361.5 297.8 Z"/><path class="tl" pathLength="1" d="M455.5 296.1 H481.5 Q488.5 296.1 488.5 303.1 V320.1 Q488.5 330.1 478.5 331.1 Q468.5 333.6 458.5 331.1 Q448.5 330.1 448.5 320.1 V303.1 Q448.5 296.1 455.5 296.1 Z"/><path class="tl" pathLength="1" d="M318.5 296.1 H344.5 Q351.5 296.1 351.5 303.1 V320.1 Q351.5 330.1 341.5 331.1 Q331.5 333.6 321.5 331.1 Q311.5 330.1 311.5 320.1 V303.1 Q311.5 296.1 318.5 296.1 Z"/><path class="tl" pathLength="1" d="M498.5 292.8 H528.5 Q535.5 292.8 535.5 299.8 V316.8 Q535.5 326.8 525.5 327.8 Q513.5 330.3 501.5 327.8 Q491.5 326.8 491.5 316.8 V299.8 Q491.5 292.8 498.5 292.8 Z"/><path class="tl" pathLength="1" d="M271.5 292.8 H301.5 Q308.5 292.8 308.5 299.8 V316.8 Q308.5 326.8 298.5 327.8 Q286.5 330.3 274.5 327.8 Q264.5 326.8 264.5 316.8 V299.8 Q264.5 292.8 271.5 292.8 Z"/><path class="tl" pathLength="1" d="M545.5 288.2 H567.5 Q574.5 288.2 574.5 295.2 V312.2 Q574.5 322.2 564.5 323.2 Q556.5 325.7 548.5 323.2 Q538.5 322.2 538.5 312.2 V295.2 Q538.5 288.2 545.5 288.2 Z"/><path class="tl" pathLength="1" d="M232.5 288.2 H254.5 Q261.5 288.2 261.5 295.2 V312.2 Q261.5 322.2 251.5 323.2 Q243.5 325.7 235.5 323.2 Q225.5 322.2 225.5 312.2 V295.2 Q225.5 288.2 232.5 288.2 Z"/></g>
+    <g class="smile__upper" style="--ivory:url(#t-porcelana-ivory)"><path class="t t-0 sr" pathLength="1" d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path class="t t-0 sl" pathLength="1" d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path class="t t-1 sr" pathLength="1" d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path class="t t-1 sl" pathLength="1" d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path class="t t-2 sr" pathLength="1" d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path class="t t-2 sl" pathLength="1" d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path class="t t-3 sr" pathLength="1" d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path class="t t-3 sl" pathLength="1" d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path class="t t-4 sr" pathLength="1" d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path class="t t-4 sl" pathLength="1" d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path class="t t-5 sr" pathLength="1" d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path class="t t-5 sl" pathLength="1" d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></g>
+    <g class="smile__sheen" clip-path="url(#t-porcelana-teeth)"><rect class="sheen" x="-200" y="150" width="160" height="160" fill="url(#t-porcelana-sheen)" transform="skewX(-20)"/></g>
+  </g>
+  <g class="smile__guides"><path class="g-mid" pathLength="1" d="M400 120 V320"/><path class="g-curve" pathLength="1" d="M130 232 Q400 320 670 232"/><path class="g-gum" pathLength="1" d="M130 206 Q400 150 670 206"/></g>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 206 C176 134 332 112 400 146 C468 112 624 134 704 206"/>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 222 C200 356 600 356 704 222"/>
+  <path class="smile__lip smile__lip--u" pathLength="1" d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214"/>
+  <path class="smile__lip smile__lip--l" pathLength="1" d="M86 214 C200 342 600 342 714 214"/>
+  <g class="smile__implant"><path class="imp-screw" pathLength="1" d="M300 186 V140 M292 150 H308 M292 160 H308 M292 170 H308 M292 180 H308"/><path class="imp-ghost" d="M278 184 H322 V232 Q322 248 300 250 Q278 248 278 232 Z"/></g>
+  <line class="smile__scan" x1="60" x2="740" y1="120" y2="120"/>
+</svg></div><span class="treat__tag">Lo que más hago</span></div>
           <h3>Carillas de porcelana</h3>
           <p>Láminas ultrafinas diseñadas a la medida de tu rostro. Corrijo forma, color y proporción cuidando tu diente natural.</p>
-          <a href="#disena" class="treat__link">¿Es para mí? →</a>
+          <a href="#test" class="treat__link">¿Es para mí? →</a>
         </article>
-
-        <article class="treat reveal" data-video="assets/video/ortodoncia-caso.mp4" data-video-title="Ortodoncia invisible · un caso real · 1:26">
-          <div class="treat__media">
-            <video muted playsinline preload="none" loop poster="assets/img/poster-ortodoncia-caso.jpg"><source src="assets/video/ortodoncia-caso.mp4" type="video/mp4"></video>
-            <span class="treat__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
+        <article class="treat treat--orto reveal" data-fx="orto">
+          <div class="treat__media"><div class="treat__smile"><svg class="smile" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="t-orto-ivory" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFEF4"/><stop offset="0.55" stop-color="#F7F1DC"/><stop offset="1" stop-color="#E9DCC2"/></linearGradient>
+    <linearGradient id="t-orto-sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="t-orto-mouth"><path d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214 C600 342 200 342 86 214 Z"/></clipPath>
+    <clipPath id="t-orto-teeth"><path d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></clipPath>
+  </defs>
+  <g class="smile__grid"><path d="M60 100 H740 M60 160 H740 M60 220 H740 M60 280 H740 M60 340 H740 M160 60 V360 M280 60 V360 M400 60 V360 M520 60 V360 M640 60 V360"/></g>
+  <g class="smile__teeth" clip-path="url(#t-orto-mouth)">
+    <g class="smile__lower"><path class="tl" pathLength="1" d="M408.5 297.8 H438.5 Q445.5 297.8 445.5 304.8 V321.8 Q445.5 331.8 435.5 332.8 Q423.5 335.3 411.5 332.8 Q401.5 331.8 401.5 321.8 V304.8 Q401.5 297.8 408.5 297.8 Z"/><path class="tl" pathLength="1" d="M361.5 297.8 H391.5 Q398.5 297.8 398.5 304.8 V321.8 Q398.5 331.8 388.5 332.8 Q376.5 335.3 364.5 332.8 Q354.5 331.8 354.5 321.8 V304.8 Q354.5 297.8 361.5 297.8 Z"/><path class="tl" pathLength="1" d="M455.5 296.1 H481.5 Q488.5 296.1 488.5 303.1 V320.1 Q488.5 330.1 478.5 331.1 Q468.5 333.6 458.5 331.1 Q448.5 330.1 448.5 320.1 V303.1 Q448.5 296.1 455.5 296.1 Z"/><path class="tl" pathLength="1" d="M318.5 296.1 H344.5 Q351.5 296.1 351.5 303.1 V320.1 Q351.5 330.1 341.5 331.1 Q331.5 333.6 321.5 331.1 Q311.5 330.1 311.5 320.1 V303.1 Q311.5 296.1 318.5 296.1 Z"/><path class="tl" pathLength="1" d="M498.5 292.8 H528.5 Q535.5 292.8 535.5 299.8 V316.8 Q535.5 326.8 525.5 327.8 Q513.5 330.3 501.5 327.8 Q491.5 326.8 491.5 316.8 V299.8 Q491.5 292.8 498.5 292.8 Z"/><path class="tl" pathLength="1" d="M271.5 292.8 H301.5 Q308.5 292.8 308.5 299.8 V316.8 Q308.5 326.8 298.5 327.8 Q286.5 330.3 274.5 327.8 Q264.5 326.8 264.5 316.8 V299.8 Q264.5 292.8 271.5 292.8 Z"/><path class="tl" pathLength="1" d="M545.5 288.2 H567.5 Q574.5 288.2 574.5 295.2 V312.2 Q574.5 322.2 564.5 323.2 Q556.5 325.7 548.5 323.2 Q538.5 322.2 538.5 312.2 V295.2 Q538.5 288.2 545.5 288.2 Z"/><path class="tl" pathLength="1" d="M232.5 288.2 H254.5 Q261.5 288.2 261.5 295.2 V312.2 Q261.5 322.2 251.5 323.2 Q243.5 325.7 235.5 323.2 Q225.5 322.2 225.5 312.2 V295.2 Q225.5 288.2 232.5 288.2 Z"/></g>
+    <g class="smile__upper" style="--ivory:url(#t-orto-ivory)"><path class="t t-0 sr" pathLength="1" d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path class="t t-0 sl" pathLength="1" d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path class="t t-1 sr" pathLength="1" d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path class="t t-1 sl" pathLength="1" d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path class="t t-2 sr" pathLength="1" d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path class="t t-2 sl" pathLength="1" d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path class="t t-3 sr" pathLength="1" d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path class="t t-3 sl" pathLength="1" d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path class="t t-4 sr" pathLength="1" d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path class="t t-4 sl" pathLength="1" d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path class="t t-5 sr" pathLength="1" d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path class="t t-5 sl" pathLength="1" d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></g>
+    <g class="smile__sheen" clip-path="url(#t-orto-teeth)"><rect class="sheen" x="-200" y="150" width="160" height="160" fill="url(#t-orto-sheen)" transform="skewX(-20)"/></g>
+  </g>
+  <g class="smile__guides"><path class="g-mid" pathLength="1" d="M400 120 V320"/><path class="g-curve" pathLength="1" d="M130 232 Q400 320 670 232"/><path class="g-gum" pathLength="1" d="M130 206 Q400 150 670 206"/></g>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 206 C176 134 332 112 400 146 C468 112 624 134 704 206"/>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 222 C200 356 600 356 704 222"/>
+  <path class="smile__lip smile__lip--u" pathLength="1" d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214"/>
+  <path class="smile__lip smile__lip--l" pathLength="1" d="M86 214 C200 342 600 342 714 214"/>
+  <g class="smile__implant"><path class="imp-screw" pathLength="1" d="M300 186 V140 M292 150 H308 M292 160 H308 M292 170 H308 M292 180 H308"/><path class="imp-ghost" d="M278 184 H322 V232 Q322 248 300 250 Q278 248 278 232 Z"/></g>
+  <line class="smile__scan" x1="60" x2="740" y1="120" y2="120"/>
+</svg></div><span class="treat__tag">Alineadores</span></div>
           <h3>Ortodoncia invisible</h3>
           <p>Alineadores removibles planificados en 3D. Ves cómo se moverá cada pieza antes del primer alineador.</p>
-          <a href="#disena" class="treat__link">¿Es para mí? →</a>
+          <a href="#test" class="treat__link">¿Es para mí? →</a>
         </article>
-
-        <article class="treat reveal" data-video="assets/video/caso-diseno.mp4" data-video-title="Microdiseño de sonrisa · caso real · 1:48">
-          <div class="treat__media">
-            <video muted playsinline preload="none" loop poster="assets/img/poster-caso-diseno.jpg"><source src="assets/video/caso-diseno.mp4" type="video/mp4"></video>
-            <span class="treat__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
+        <article class="treat treat--micro reveal" data-fx="micro">
+          <div class="treat__media"><div class="treat__smile"><svg class="smile" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="t-micro-ivory" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFEF4"/><stop offset="0.55" stop-color="#F7F1DC"/><stop offset="1" stop-color="#E9DCC2"/></linearGradient>
+    <linearGradient id="t-micro-sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="t-micro-mouth"><path d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214 C600 342 200 342 86 214 Z"/></clipPath>
+    <clipPath id="t-micro-teeth"><path d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></clipPath>
+  </defs>
+  <g class="smile__grid"><path d="M60 100 H740 M60 160 H740 M60 220 H740 M60 280 H740 M60 340 H740 M160 60 V360 M280 60 V360 M400 60 V360 M520 60 V360 M640 60 V360"/></g>
+  <g class="smile__teeth" clip-path="url(#t-micro-mouth)">
+    <g class="smile__lower"><path class="tl" pathLength="1" d="M408.5 297.8 H438.5 Q445.5 297.8 445.5 304.8 V321.8 Q445.5 331.8 435.5 332.8 Q423.5 335.3 411.5 332.8 Q401.5 331.8 401.5 321.8 V304.8 Q401.5 297.8 408.5 297.8 Z"/><path class="tl" pathLength="1" d="M361.5 297.8 H391.5 Q398.5 297.8 398.5 304.8 V321.8 Q398.5 331.8 388.5 332.8 Q376.5 335.3 364.5 332.8 Q354.5 331.8 354.5 321.8 V304.8 Q354.5 297.8 361.5 297.8 Z"/><path class="tl" pathLength="1" d="M455.5 296.1 H481.5 Q488.5 296.1 488.5 303.1 V320.1 Q488.5 330.1 478.5 331.1 Q468.5 333.6 458.5 331.1 Q448.5 330.1 448.5 320.1 V303.1 Q448.5 296.1 455.5 296.1 Z"/><path class="tl" pathLength="1" d="M318.5 296.1 H344.5 Q351.5 296.1 351.5 303.1 V320.1 Q351.5 330.1 341.5 331.1 Q331.5 333.6 321.5 331.1 Q311.5 330.1 311.5 320.1 V303.1 Q311.5 296.1 318.5 296.1 Z"/><path class="tl" pathLength="1" d="M498.5 292.8 H528.5 Q535.5 292.8 535.5 299.8 V316.8 Q535.5 326.8 525.5 327.8 Q513.5 330.3 501.5 327.8 Q491.5 326.8 491.5 316.8 V299.8 Q491.5 292.8 498.5 292.8 Z"/><path class="tl" pathLength="1" d="M271.5 292.8 H301.5 Q308.5 292.8 308.5 299.8 V316.8 Q308.5 326.8 298.5 327.8 Q286.5 330.3 274.5 327.8 Q264.5 326.8 264.5 316.8 V299.8 Q264.5 292.8 271.5 292.8 Z"/><path class="tl" pathLength="1" d="M545.5 288.2 H567.5 Q574.5 288.2 574.5 295.2 V312.2 Q574.5 322.2 564.5 323.2 Q556.5 325.7 548.5 323.2 Q538.5 322.2 538.5 312.2 V295.2 Q538.5 288.2 545.5 288.2 Z"/><path class="tl" pathLength="1" d="M232.5 288.2 H254.5 Q261.5 288.2 261.5 295.2 V312.2 Q261.5 322.2 251.5 323.2 Q243.5 325.7 235.5 323.2 Q225.5 322.2 225.5 312.2 V295.2 Q225.5 288.2 232.5 288.2 Z"/></g>
+    <g class="smile__upper" style="--ivory:url(#t-micro-ivory)"><path class="t t-0 sr" pathLength="1" d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path class="t t-0 sl" pathLength="1" d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path class="t t-1 sr" pathLength="1" d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path class="t t-1 sl" pathLength="1" d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path class="t t-2 sr" pathLength="1" d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path class="t t-2 sl" pathLength="1" d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path class="t t-3 sr" pathLength="1" d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path class="t t-3 sl" pathLength="1" d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path class="t t-4 sr" pathLength="1" d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path class="t t-4 sl" pathLength="1" d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path class="t t-5 sr" pathLength="1" d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path class="t t-5 sl" pathLength="1" d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></g>
+    <g class="smile__sheen" clip-path="url(#t-micro-teeth)"><rect class="sheen" x="-200" y="150" width="160" height="160" fill="url(#t-micro-sheen)" transform="skewX(-20)"/></g>
+  </g>
+  <g class="smile__guides"><path class="g-mid" pathLength="1" d="M400 120 V320"/><path class="g-curve" pathLength="1" d="M130 232 Q400 320 670 232"/><path class="g-gum" pathLength="1" d="M130 206 Q400 150 670 206"/></g>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 206 C176 134 332 112 400 146 C468 112 624 134 704 206"/>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 222 C200 356 600 356 704 222"/>
+  <path class="smile__lip smile__lip--u" pathLength="1" d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214"/>
+  <path class="smile__lip smile__lip--l" pathLength="1" d="M86 214 C200 342 600 342 714 214"/>
+  <g class="smile__implant"><path class="imp-screw" pathLength="1" d="M300 186 V140 M292 150 H308 M292 160 H308 M292 170 H308 M292 180 H308"/><path class="imp-ghost" d="M278 184 H322 V232 Q322 248 300 250 Q278 248 278 232 Z"/></g>
+  <line class="smile__scan" x1="60" x2="740" y1="120" y2="120"/>
+</svg></div><span class="treat__tag">Sin desgaste</span></div>
           <h3>Microdiseño de sonrisa</h3>
           <p>Sin desgastar tus dientes: añado en vez de quitar para mejorar forma, tamaño y color. Cambios sutiles, naturales.</p>
-          <a href="#disena" class="treat__link">¿Es para mí? →</a>
+          <a href="#test" class="treat__link">¿Es para mí? →</a>
         </article>
-
-        <article class="treat reveal" data-video="assets/video/implantes.mp4" data-video-title="Implantes dentales · 0:33">
-          <div class="treat__media">
-            <video muted playsinline preload="none" loop poster="assets/img/poster-implantes.jpg"><source src="assets/video/implantes.mp4" type="video/mp4"></video>
-            <span class="treat__play"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
+        <article class="treat treat--implante reveal" data-fx="implante">
+          <div class="treat__media"><div class="treat__smile"><svg class="smile" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="t-implante-ivory" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFEF4"/><stop offset="0.55" stop-color="#F7F1DC"/><stop offset="1" stop-color="#E9DCC2"/></linearGradient>
+    <linearGradient id="t-implante-sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="t-implante-mouth"><path d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214 C600 342 200 342 86 214 Z"/></clipPath>
+    <clipPath id="t-implante-teeth"><path d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></clipPath>
+  </defs>
+  <g class="smile__grid"><path d="M60 100 H740 M60 160 H740 M60 220 H740 M60 280 H740 M60 340 H740 M160 60 V360 M280 60 V360 M400 60 V360 M520 60 V360 M640 60 V360"/></g>
+  <g class="smile__teeth" clip-path="url(#t-implante-mouth)">
+    <g class="smile__lower"><path class="tl" pathLength="1" d="M408.5 297.8 H438.5 Q445.5 297.8 445.5 304.8 V321.8 Q445.5 331.8 435.5 332.8 Q423.5 335.3 411.5 332.8 Q401.5 331.8 401.5 321.8 V304.8 Q401.5 297.8 408.5 297.8 Z"/><path class="tl" pathLength="1" d="M361.5 297.8 H391.5 Q398.5 297.8 398.5 304.8 V321.8 Q398.5 331.8 388.5 332.8 Q376.5 335.3 364.5 332.8 Q354.5 331.8 354.5 321.8 V304.8 Q354.5 297.8 361.5 297.8 Z"/><path class="tl" pathLength="1" d="M455.5 296.1 H481.5 Q488.5 296.1 488.5 303.1 V320.1 Q488.5 330.1 478.5 331.1 Q468.5 333.6 458.5 331.1 Q448.5 330.1 448.5 320.1 V303.1 Q448.5 296.1 455.5 296.1 Z"/><path class="tl" pathLength="1" d="M318.5 296.1 H344.5 Q351.5 296.1 351.5 303.1 V320.1 Q351.5 330.1 341.5 331.1 Q331.5 333.6 321.5 331.1 Q311.5 330.1 311.5 320.1 V303.1 Q311.5 296.1 318.5 296.1 Z"/><path class="tl" pathLength="1" d="M498.5 292.8 H528.5 Q535.5 292.8 535.5 299.8 V316.8 Q535.5 326.8 525.5 327.8 Q513.5 330.3 501.5 327.8 Q491.5 326.8 491.5 316.8 V299.8 Q491.5 292.8 498.5 292.8 Z"/><path class="tl" pathLength="1" d="M271.5 292.8 H301.5 Q308.5 292.8 308.5 299.8 V316.8 Q308.5 326.8 298.5 327.8 Q286.5 330.3 274.5 327.8 Q264.5 326.8 264.5 316.8 V299.8 Q264.5 292.8 271.5 292.8 Z"/><path class="tl" pathLength="1" d="M545.5 288.2 H567.5 Q574.5 288.2 574.5 295.2 V312.2 Q574.5 322.2 564.5 323.2 Q556.5 325.7 548.5 323.2 Q538.5 322.2 538.5 312.2 V295.2 Q538.5 288.2 545.5 288.2 Z"/><path class="tl" pathLength="1" d="M232.5 288.2 H254.5 Q261.5 288.2 261.5 295.2 V312.2 Q261.5 322.2 251.5 323.2 Q243.5 325.7 235.5 323.2 Q225.5 322.2 225.5 312.2 V295.2 Q225.5 288.2 232.5 288.2 Z"/></g>
+    <g class="smile__upper" style="--ivory:url(#t-implante-ivory)"><path class="t t-0 sr" pathLength="1" d="M408.5 180.4 H462.5 Q469.5 180.4 469.5 187.4 V277.5 Q469.5 287.5 459.5 288.5 Q435.5 291.0 411.5 288.5 Q401.5 287.5 401.5 277.5 V187.4 Q401.5 180.4 408.5 180.4 Z"/><path class="t t-0 sl" pathLength="1" d="M337.5 180.4 H391.5 Q398.5 180.4 398.5 187.4 V277.5 Q398.5 287.5 388.5 288.5 Q364.5 291.0 340.5 288.5 Q330.5 287.5 330.5 277.5 V187.4 Q330.5 180.4 337.5 180.4 Z"/><path class="t t-1 sr" pathLength="1" d="M479.5 183.0 H519.5 Q526.5 183.0 526.5 190.0 V274.0 Q526.5 284.0 516.5 285.0 Q499.5 287.5 482.5 285.0 Q472.5 284.0 472.5 274.0 V190.0 Q472.5 183.0 479.5 183.0 Z"/><path class="t t-1 sl" pathLength="1" d="M280.5 183.0 H320.5 Q327.5 183.0 327.5 190.0 V274.0 Q327.5 284.0 317.5 285.0 Q300.5 287.5 283.5 285.0 Q273.5 284.0 273.5 274.0 V190.0 Q273.5 183.0 280.5 183.0 Z"/><path class="t t-2 sr" pathLength="1" d="M536.5 187.2 H572.5 Q579.5 187.2 579.5 194.2 V264.5 Q579.5 276.5 554.5 283.5 Q529.5 276.5 529.5 264.5 V194.2 Q529.5 187.2 536.5 187.2 Z"/><path class="t t-2 sl" pathLength="1" d="M227.5 187.2 H263.5 Q270.5 187.2 270.5 194.2 V264.5 Q270.5 276.5 245.5 283.5 Q220.5 276.5 220.5 264.5 V194.2 Q220.5 187.2 227.5 187.2 Z"/><path class="t t-3 sr" pathLength="1" d="M589.5 192.5 H619.5 Q626.5 192.5 626.5 199.5 V261.3 Q626.5 271.3 616.5 272.3 Q604.5 274.8 592.5 272.3 Q582.5 271.3 582.5 261.3 V199.5 Q582.5 192.5 589.5 192.5 Z"/><path class="t t-3 sl" pathLength="1" d="M180.5 192.5 H210.5 Q217.5 192.5 217.5 199.5 V261.3 Q217.5 271.3 207.5 272.3 Q195.5 274.8 183.5 272.3 Q173.5 271.3 173.5 261.3 V199.5 Q173.5 192.5 180.5 192.5 Z"/><path class="t t-4 sr" pathLength="1" d="M636.5 198.5 H660.5 Q667.5 198.5 667.5 205.5 V253.3 Q667.5 263.3 657.5 264.3 Q648.5 266.8 639.5 264.3 Q629.5 263.3 629.5 253.3 V205.5 Q629.5 198.5 636.5 198.5 Z"/><path class="t t-4 sl" pathLength="1" d="M139.5 198.5 H163.5 Q170.5 198.5 170.5 205.5 V253.3 Q170.5 263.3 160.5 264.3 Q151.5 266.8 142.5 264.3 Q132.5 263.3 132.5 253.3 V205.5 Q132.5 198.5 139.5 198.5 Z"/><path class="t t-5 sr" pathLength="1" d="M677.1 204.5 H693.9 Q700.5 204.5 700.5 211.1 V246.4 Q700.5 255.4 691.5 256.4 Q685.5 258.9 679.5 256.4 Q670.5 255.4 670.5 246.4 V211.1 Q670.5 204.5 677.1 204.5 Z"/><path class="t t-5 sl" pathLength="1" d="M106.1 204.5 H122.9 Q129.5 204.5 129.5 211.1 V246.4 Q129.5 255.4 120.5 256.4 Q114.5 258.9 108.5 256.4 Q99.5 255.4 99.5 246.4 V211.1 Q99.5 204.5 106.1 204.5 Z"/></g>
+    <g class="smile__sheen" clip-path="url(#t-implante-teeth)"><rect class="sheen" x="-200" y="150" width="160" height="160" fill="url(#t-implante-sheen)" transform="skewX(-20)"/></g>
+  </g>
+  <g class="smile__guides"><path class="g-mid" pathLength="1" d="M400 120 V320"/><path class="g-curve" pathLength="1" d="M130 232 Q400 320 670 232"/><path class="g-gum" pathLength="1" d="M130 206 Q400 150 670 206"/></g>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 206 C176 134 332 112 400 146 C468 112 624 134 704 206"/>
+  <path class="smile__lip smile__lip--o" pathLength="1" d="M96 222 C200 356 600 356 704 222"/>
+  <path class="smile__lip smile__lip--u" pathLength="1" d="M86 214 C170 148 330 128 400 162 C470 128 630 148 714 214"/>
+  <path class="smile__lip smile__lip--l" pathLength="1" d="M86 214 C200 342 600 342 714 214"/>
+  <g class="smile__implant"><path class="imp-screw" pathLength="1" d="M300 186 V140 M292 150 H308 M292 160 H308 M292 170 H308 M292 180 H308"/><path class="imp-ghost" d="M278 184 H322 V232 Q322 248 300 250 Q278 248 278 232 Z"/></g>
+  <line class="smile__scan" x1="60" x2="740" y1="120" y2="120"/>
+</svg></div><span class="treat__tag">Cirugía</span></div>
           <h3>Implantes y cirugía oral</h3>
           <p>Cuando falta una pieza o hay que extraer una cordal: precisión quirúrgica y un trato que te tranquiliza.</p>
-          <a href="#disena" class="treat__link">¿Es para mí? →</a>
+          <a href="#test" class="treat__link">¿Es para mí? →</a>
         </article>
       </div>
 
@@ -194,10 +336,10 @@
     </div>
   </section>
 
-  <!-- ============ CAPÍTULO 3 · DISEÑA TU SONRISA ============ -->
-  <section class="chapter chapter--cream" id="disena">
+  <!-- ============ CAPÍTULO 4 · TEST ============ -->
+  <section class="chapter chapter--light" id="test">
     <div class="container">
-      <p class="chapter__label reveal"><i>Capítulo 03</i>Diseña tu sonrisa</p>
+      <p class="chapter__label reveal"><i>Capítulo 04</i>¿Por dónde empezar?</p>
       <h2 class="section__title reveal">Tres preguntas<br><em>y te digo por dónde empezar</em></h2>
       <p class="chapter__intro reveal">No es un diagnóstico. Es una orientación para que llegues a tu valoración sabiendo qué preguntar.</p>
 
@@ -248,29 +390,24 @@
     </div>
   </section>
 
-  <!-- ============ CAPÍTULO 4 · EL CAMBIO ============ -->
+  <!-- ============ CAPÍTULO 5 · EL CAMBIO ============ -->
   <section class="chapter chapter--dark" id="cambio">
     <div class="container">
-      <p class="chapter__label chapter__label--light reveal"><i>Capítulo 04</i>El cambio</p>
+      <p class="chapter__label chapter__label--light reveal"><i>Capítulo 05</i>El cambio</p>
       <h2 class="section__title reveal">Sonrisas reales,<br><em>no diseños falsos</em></h2>
+      <p class="chapter__intro chapter__intro--light reveal">Mueve el cursor (o el dedo) sobre la foto: el después aparece donde tú lo lleves.</p>
 
-      <div class="patient">
-        <figure class="patient__media reveal">
-          <div class="phone phone--dark">
-            <video playsinline preload="none" poster="assets/img/poster-porcelana-paciente.jpg"><source src="assets/video/porcelana-paciente.mp4" type="video/mp4"></video>
-            <button class="video-play" data-video="assets/video/porcelana-paciente.mp4" data-video-title="Un paciente de porcelana · 0:35" aria-label="Reproducir: la historia de un paciente de porcelana"><span class="video-play__circle"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></button>
-          </div>
-        </figure>
-        <div class="patient__copy">
-          <p class="eyebrow eyebrow--gold reveal">La historia de un paciente</p>
-          <h3 class="reveal">Llegó con desgastes.<br>Se fue con la sonrisa que quería.</h3>
-          <p class="reveal">Te cuento su caso de principio a fin: qué buscaba, cómo lo diseñamos en digital y cómo quedaron sus carillas de porcelana. Es el mismo proceso que seguiría contigo.</p>
-          <blockquote class="reveal">
-            <p>“Una sonrisa bien diseñada no se nota. <em>Se siente.</em>”</p>
-            <cite>— Dra. Clara Valdez</cite>
-          </blockquote>
-        </div>
+      <div class="spot reveal" id="spot">
+        <img class="spot__before" src="assets/img/bna-porcelana-antes.jpg" alt="Antes — carillas de porcelana" loading="lazy">
+        <img class="spot__after" src="assets/img/bna-porcelana-despues.jpg" alt="Después — carillas de porcelana" loading="lazy">
+        <span class="spot__label spot__label--before">Antes</span>
+        <span class="spot__label spot__label--after">Después</span>
+        <span class="spot__ring" aria-hidden="true"></span>
       </div>
+      <blockquote class="spot__quote reveal">
+        <p>“Una sonrisa bien diseñada no se nota. <em>Se siente.</em>”</p>
+        <cite>— Dra. Clara Valdez</cite>
+      </blockquote>
 
       <div class="viewer reveal" id="viewer">
         <div class="viewer__top">
@@ -323,37 +460,56 @@
     </div>
   </section>
 
-  <!-- ============ CAPÍTULO 5 · MI CLÍNICA ============ -->
-  <section class="chapter chapter--cream" id="clinica">
-    <div class="container">
-      <p class="chapter__label reveal"><i>Capítulo 05</i>Mi clínica</p>
-      <div class="clinic__grid">
-        <div class="clinic__copy">
-          <h2 class="section__title reveal">Un lugar donde<br><em>te sientes cómodo</em></h2>
-          <p class="reveal">Después de meses de trabajo abrí mi propia clínica en Plaza Mayor, Rohrmoser. La pensé amplia, luminosa y tranquila, para que desde que entras sepas que estás en buenas manos.</p>
-          <ul class="clinic__facts reveal">
-            <li><b>Dónde</b> Plaza Mayor, local 25-26, planta baja · Rohrmoser, San José <a href="https://www.google.com/maps/search/?api=1&query=9.9451891,-84.1174972" target="_blank" rel="noopener">Ver en el mapa →</a></li>
-            <li><b>Cuándo</b> Atención bajo cita previa</li>
-            <li><b>Cómo pagar</b> Tarjeta, efectivo, SINPE Móvil y transferencia · Seguro Pan-American Life (PALIG)</li>
-          </ul>
-          <div class="clinic__photos reveal">
-            <img src="assets/img/clara-consultorio-1.jpg" alt="La Dra. Clara Valdez en su consultorio" loading="lazy" data-lightbox>
-            <img src="assets/img/clara-consultorio-2.jpg" alt="La Dra. Clara Valdez atendiendo a una paciente" loading="lazy" data-lightbox>
-          </div>
+  <!-- ============ CAPÍTULO 6 · MI HISTORIA ============ -->
+  <section class="chapter chapter--cream historia" id="historia">
+    <div class="container historia__grid">
+      <figure class="historia__media reveal">
+        <div class="phone">
+          <video playsinline preload="none" poster="assets/img/poster-historia.jpg"><source src="assets/video/historia.mp4" type="video/mp4"></video>
+          <button class="video-play" data-video="assets/video/historia.mp4" data-video-title="Mi historia · 1:38" aria-label="Reproducir: mi historia"><span class="video-play__circle"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></button>
         </div>
-        <figure class="clinic__media reveal">
-          <div class="phone">
-            <video playsinline preload="none" poster="assets/img/poster-clinica.jpg"><source src="assets/video/clinica-nueva.mp4" type="video/mp4"></video>
-            <button class="video-play" data-video="assets/video/clinica-nueva.mp4" data-video-title="Recorrido por la clínica · 0:35" aria-label="Reproducir: recorrido por la clínica"><span class="video-play__circle"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></button>
-          </div>
-          <figcaption>Te muestro cómo quedó · 0:35</figcaption>
-        </figure>
+        <figcaption>Mi historia · 1:38 · con sonido</figcaption>
+      </figure>
+      <div class="historia__copy">
+        <p class="chapter__label reveal"><i>Capítulo 06</i>Mi historia</p>
+        <h2 class="section__title reveal">De dónde vengo<br><em>y por qué hago esto</em></h2>
+        <p class="reveal">Crecí entre consultorios y desde niña supe dónde quería estar. En este video te cuento, en mis palabras y sin guion, por qué me dedico a la estética dental y qué me importa de cada persona que se sienta conmigo.</p>
+        <ul class="historia__facts reveal">
+          <li><b>Cómo trabajo</b> Primero te escucho, después diseño y solo al final tratamos.</li>
+          <li><b>Qué me importa</b> Que te veas natural y que sonrías sin pensarlo.</li>
+          <li><b>Dónde estoy</b> Plaza Mayor, Rohrmoser, San José.</li>
+        </ul>
+        <button class="btn btn--outline magnetic reveal" data-video="assets/video/historia.mp4" data-video-title="Mi historia · 1:38">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          Ver mi historia
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAPÍTULO 7 · MI CLÍNICA ============ -->
+  <section class="chapter chapter--light clinic" id="clinica">
+    <div class="container">
+      <p class="chapter__label reveal"><i>Capítulo 07</i>Mi clínica</p>
+      <h2 class="section__title reveal">Un lugar donde<br><em>te sientes cómodo</em></h2>
+      <p class="chapter__intro reveal">Abrí mi propia clínica en Plaza Mayor, Rohrmoser. La pensé amplia, luminosa y tranquila, para que desde que entras sepas que estás en buenas manos.</p>
+      <div class="bento">
+        <a class="bento__item bento__item--map reveal" href="https://www.google.com/maps/search/?api=1&query=9.9451891,-84.1174972" target="_blank" rel="noopener">
+          <b>Dónde</b>
+          <strong>Plaza Mayor, local 25-26</strong>
+          <span>Planta baja · Rohrmoser, San José</span>
+          <em>Abrir en el mapa →</em>
+        </a>
+        <div class="bento__item reveal"><b>Cuándo</b><strong>Con cita previa</strong><span>Reserva en línea o por WhatsApp.</span></div>
+        <div class="bento__item reveal"><b>Cómo pagar</b><strong>Tarjeta · Efectivo · SINPE</strong><span>También transferencia.</span></div>
+        <div class="bento__item reveal"><b>Seguro</b><strong>Pan-American Life</strong><span>Aceptamos PALIG.</span></div>
+        <a class="bento__item bento__item--rev reveal" href="https://www.hulihealth.com/es/doctor/clara-valdez-gomez_234795" target="_blank" rel="noopener"><b>Opiniones</b><strong><span class="count" data-count="20">0</span> reseñas · 5.0 ★</strong><span>Verificadas en HuliHealth →</span></a>
       </div>
     </div>
   </section>
 
   <!-- ============ OPINIONES ============ -->
-  <section class="chapter chapter--light" id="opiniones">
+  <section class="chapter chapter--cream" id="opiniones">
     <div class="container">
       <p class="chapter__label reveal"><i>Opiniones</i>Lo que dicen mis pacientes</p>
       <div class="testimonials__grid">
@@ -362,17 +518,13 @@
         <blockquote class="testimonial reveal"><span class="testimonial__stars" aria-hidden="true">★★★★★</span><p>“Excelente atención, puntual y trato muy amable. Recomendada.”</p><cite>— Edwin A. · HuliHealth</cite></blockquote>
         <blockquote class="testimonial reveal"><span class="testimonial__stars" aria-hidden="true">★★★★★</span><p>“Excelente trato de la doctora, consultorio muy agradable.”</p><cite>— Hernando R. · HuliHealth</cite></blockquote>
       </div>
-      <a href="https://www.hulihealth.com/es/doctor/clara-valdez-gomez_234795" target="_blank" rel="noopener" class="review-badge reveal">
-        <span class="review-badge__stars" aria-hidden="true">★★★★★</span>
-        <span class="review-badge__text"><strong>5.0</strong> · 20 reseñas verificadas en HuliHealth</span>
-      </a>
     </div>
   </section>
 
-  <!-- ============ CAPÍTULO 6 · TU TURNO ============ -->
-  <section class="chapter chapter--cream" id="agenda">
+  <!-- ============ CAPÍTULO 8 · TU TURNO ============ -->
+  <section class="chapter chapter--light" id="agenda">
     <div class="container">
-      <p class="chapter__label reveal"><i>Capítulo 06</i>Tu turno</p>
+      <p class="chapter__label reveal"><i>Capítulo 08</i>Tu turno</p>
       <h2 class="section__title reveal">Reserva tu cita<br><em>ahora mismo</em></h2>
       <p class="chapter__intro reveal">Aquí ves mi disponibilidad real: elige el día y la hora que mejor te convenga y confirma en segundos. ¿Prefieres escribirme? Mi WhatsApp siempre está abierto.</p>
       <div class="booking__widget reveal">
@@ -406,15 +558,11 @@
   <!-- Barra fija en celular -->
   <div class="mbar" id="mbar">
     <a href="#agenda" class="btn btn--gold">Reservar cita</a>
-    <a href="https://wa.me/50672110934?text=Hola%20Dra.%20Clara%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener" class="mbar__wa" aria-label="WhatsApp">
-      <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.5Z"/></svg>
-    </a>
+    <a href="https://wa.me/50672110934?text=Hola%20Dra.%20Clara%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener" class="mbar__wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.5Z"/></svg></a>
   </div>
 
   <!-- WhatsApp flotante (escritorio) -->
-  <a href="https://wa.me/50672110934?text=Hola%20Dra.%20Clara%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escribir por WhatsApp">
-    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.5Z"/></svg>
-  </a>
+  <a href="https://wa.me/50672110934?text=Hola%20Dra.%20Clara%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.5Z"/></svg></a>
 
   <!-- Reproductor con sonido -->
   <div class="vmodal" id="vmodal" hidden>
